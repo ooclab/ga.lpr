@@ -1,6 +1,6 @@
 openapi: '3.0.2'
 info:
-  title: 工作人员小程序端 API
+  title: LPR （车牌识别）服务 API
   version: '1.0.0'
   description: |
     注意
@@ -10,7 +10,7 @@ servers:
   - url: https://localhost:3000
     description: 本地开发环境
 tags:
-  - name: npr
+  - name: lpr
     description: 车牌识别
 
 
@@ -24,11 +24,11 @@ paths:
           description: OK
 
           
-  "/npr":
+  "/lpr":
   
     post:
       tags:
-      - npr
+      - lpr
       summary: 识别车牌
       requestBody:
         required: true
@@ -50,16 +50,35 @@ paths:
             application/json:
               schema:
                 type: object
+                required:
+                - status
                 properties:
                   status:
                     type: string
-                    description: success
+                    description: |
+                      识别成功返回 `success` ，识别失败返回 `unknown`
+                    enum:
+                    - success
+                    - unknown
                   data:
                     type: object
+                    required:
+                    - lp
+                    - precision
+                    description: |
+                      如果识别成功，则返回该数值
                     properties:
-                      np:
+                      lp:
                         type: string
                         description: 车牌
+                      precision:
+                        type: number
+                        description: 精准度
+                      pos:
+                        type: array
+                        description: 坐标
+                        items:
+                          type: number
 
 
 components:

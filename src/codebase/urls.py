@@ -2,7 +2,7 @@ from tornado.web import url
 
 from codebase.controllers import (
     default,
-    npr
+    lpr
 )
 
 
@@ -15,7 +15,7 @@ HANDLERS = [
 
     # NPR
 
-    url(r"/npr",
-        npr.NPRHandler),
+    url(r"/lpr",
+        lpr.LPRHandler),
 
 ]

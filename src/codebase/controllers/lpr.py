@@ -8,7 +8,7 @@ from hyperlpr import HyperLPR_PlateRecogntion
 from codebase.web import APIRequestHandler
 
 
-class NPRHandler(APIRequestHandler):
+class LPRHandler(APIRequestHandler):
 
     def post(self):
         """识别车牌
@@ -18,5 +18,11 @@ class NPRHandler(APIRequestHandler):
 
         image = io.imread(url)
         info = HyperLPR_PlateRecogntion(image)
-        logging.info("识别车牌：%s", info)
-        self.success(data=info)
+        if info:
+            item = info[0]
+            logging.info("识别车牌：%s", info)
+            self.success(data={"lp": item[0], "precision": item[1], "pos": item[2]})
+            return
+
+        logging.info("识别失败：%s", url)
+        self.success(status="unknown", message="车牌识别失败")
