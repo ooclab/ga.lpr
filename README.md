@@ -13,7 +13,45 @@
    1. 优先使用本地识别
    2. 识别失败可以调用备用的公有云 API 进行识别（可选）
 
+## 使用说明
+
+启动服务：
+
+```shell
+docker run -it --rm -e CORS="true" -p 3000:3000 ooclab/ga.npr:v0.0.1
+```
+
+调用接口测试：
+
+```shell
+curl -X POST \
+  http://127.0.0.1:3000/lpr \
+  -H 'Content-Type: application/json' \
+  -d '{
+"url": "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2050338583,3464354364&fm=26&gp=0.jpg"
+}'
+```
+
+返回示例：
+
+```json
+{
+    "status": "success",
+    "data": {
+        "lp": "黑L53710",
+        "precision": 0.9421328561646598,
+        "pos": [
+            356,
+            20,
+            566,
+            78
+        ]
+    }
+}
+```
+
+接口文档：[http://apidoc.ooclab.com/?url=http://127.0.0.1:3000](http://apidoc.ooclab.com/?url=http://127.0.0.1:3000)
+
 ## 参考
 
 当前车牌识别功能使用 [HyperLPR](https://github.com/zeusees/HyperLPR) 。
-
