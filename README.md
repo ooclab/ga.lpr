@@ -12,3 +12,8 @@
 
    1. 优先使用本地识别
    2. 识别失败可以调用备用的公有云 API 进行识别（可选）
+
+## 参考
+
+当前车牌识别功能使用 [HyperLPR](https://github.com/zeusees/HyperLPR) 。
+
