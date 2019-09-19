@@ -1,0 +1,24 @@
+version: '3'
+services:
+    api:
+        build:
+          context: .
+          dockerfile: Dockerfile.dev
+        tty: true
+        command: bash
+        environment:
+            DEBUG: "true"
+            DB_URI: "postgresql+pg8000://root:password@postgres:5432/mydb"
+        ports:
+            - "3003:3000"
+        volumes:
+            - "./:/work"
+
+    postgres:
+        image: postgres:11
+        environment:
+            POSTGRES_DB: mydb
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: password
+        # volumes:
+        #     - "./pg-data:/var/lib/postgresql"

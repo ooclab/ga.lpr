@@ -1,0 +1,1051 @@
+<testsuite errors="1" failures="0" name="nose2-junit" skipped="0" tests="1" time="0.015">
+  <testcase classname="nose2.loader.ModuleImportFailure.tests.api_testing" name="test_default" time="0.000418">
+    <error message="test failure">ImportError: Failed to import test module: tests.api_testing.test_default
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/swagger_spec_validator/common.py", line 24, in wrapper
+    return method(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/swagger_spec_validator/validator20.py", line 215, in validate_json
+    cls=Draft4Validator,
+  File "/usr/local/lib/python3.7/site-packages/swagger_spec_validator/ref_validators.py", line 52, in validate
+    instance_cls(schema, *args, **kwargs).validate(instance)
+  File "/usr/local/lib/python3.7/site-packages/jsonschema/validators.py", line 348, in validate
+    raise error
+jsonschema.exceptions.ValidationError: 'components', 'openapi', 'servers' do not match any of the regexes: '^x-'
+
+Failed validating 'additionalProperties' in schema:
+    {'$schema': 'http://json-schema.org/draft-04/schema#',
+     'additionalProperties': False,
+     'definitions': {'apiKeySecurity': {'additionalProperties': False,
+                                        'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                        'properties': {'description': {'type': 'string'},
+                                                       'in': {'enum': ['header',
+                                                                       'query'],
+                                                              'type': 'string'},
+                                                       'name': {'type': 'string'},
+                                                       'type': {'enum': ['apiKey'],
+                                                                'type': 'string'}},
+                                        'required': ['type', 'name', 'in'],
+                                        'type': 'object'},
+                     'basicAuthenticationSecurity': {'additionalProperties': False,
+                                                     'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                                     'properties': {'description': {'type': 'string'},
+                                                                    'type': {'enum': ['basic'],
+                                                                             'type': 'string'}},
+                                                     'required': ['type'],
+                                                     'type': 'object'},
+                     'bodyParameter': {'additionalProperties': False,
+                                       'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                       'properties': {'description': {'description': 'A '
+                                                                                     'brief '
+                                                                                     'description '
+                                                                                     'of '
+                                                                                     'the '
+                                                                                     'parameter. '
+                                                                                     'This '
+                                                                                     'could '
+                                                                                     'contain '
+                                                                                     'examples '
+                                                                                     'of '
+                                                                                     'use.  '
+                                                                                     'GitHub '
+                                                                                     'Flavored '
+                                                                                     'Markdown '
+                                                                                     'is '
+                                                                                     'allowed.',
+                                                                      'type': 'string'},
+                                                      'in': {'description': 'Determines '
+                                                                            'the '
+                                                                            'location '
+                                                                            'of '
+                                                                            'the '
+                                                                            'parameter.',
+                                                             'enum': ['body'],
+                                                             'type': 'string'},
+                                                      'name': {'description': 'The '
+                                                                              'name '
+                                                                              'of '
+                                                                              'the '
+                                                                              'parameter.',
+                                                               'type': 'string'},
+                                                      'required': {'default': False,
+                                                                   'description': 'Determines '
+                                                                                  'whether '
+                                                                                  'or '
+                                                                                  'not '
+                                                                                  'this '
+                                                                                  'parameter '
+                                                                                  'is '
+                                                                                  'required '
+                                                                                  'or '
+                                                                                  'optional.',
+                                                                   'type': 'boolean'},
+                                                      'schema': {'$ref': '#/definitions/schema'}},
+                                       'required': ['name', 'in', 'schema'],
+                                       'type': 'object'},
+                     'collectionFormat': {'default': 'csv',
+                                          'enum': ['csv',
+                                                   'ssv',
+                                                   'tsv',
+                                                   'pipes'],
+                                          'type': 'string'},
+                     'collectionFormatWithMulti': {'default': 'csv',
+                                                   'enum': ['csv',
+                                                            'ssv',
+                                                            'tsv',
+                                                            'pipes',
+                                                            'multi'],
+                                                   'type': 'string'},
+                     'contact': {'additionalProperties': False,
+                                 'description': 'Contact information for '
+                                                'the owners of the API.',
+                                 'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                 'properties': {'email': {'description': 'The '
+                                                                         'email '
+                                                                         'address '
+                                                                         'of '
+                                                                         'the '
+                                                                         'contact '
+                                                                         'person/organization.',
+                                                          'format': 'email',
+                                                          'type': 'string'},
+                                                'name': {'description': 'The '
+                                                                        'identifying '
+                                                                        'name '
+                                                                        'of '
+                                                                        'the '
+                                                                        'contact '
+                                                                        'person/organization.',
+                                                         'type': 'string'},
+                                                'url': {'description': 'The '
+                                                                       'URL '
+                                                                       'pointing '
+                                                                       'to '
+                                                                       'the '
+                                                                       'contact '
+                                                                       'information.',
+                                                        'format': 'uri',
+                                                        'type': 'string'}},
+                                 'type': 'object'},
+                     'default': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/default'},
+                     'definitions': {'additionalProperties': {'$ref': '#/definitions/schema'},
+                                     'description': 'One or more JSON '
+                                                    'objects describing '
+                                                    'the schemas being '
+                                                    'consumed and produced '
+                                                    'by the API.',
+                                     'type': 'object'},
+                     'description': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/description'},
+                     'enum': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/enum'},
+                     'examples': {'additionalProperties': True,
+                                  'type': 'object'},
+                     'exclusiveMaximum': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/exclusiveMaximum'},
+                     'exclusiveMinimum': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/exclusiveMinimum'},
+                     'externalDocs': {'additionalProperties': False,
+                                      'description': 'information about '
+                                                     'external '
+                                                     'documentation',
+                                      'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                      'properties': {'description': {'type': 'string'},
+                                                     'url': {'format': 'uri',
+                                                             'type': 'string'}},
+                                      'required': ['url'],
+                                      'type': 'object'},
+                     'fileSchema': {'additionalProperties': False,
+                                    'description': 'A deterministic '
+                                                   'version of a JSON '
+                                                   'Schema object.',
+                                    'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                    'properties': {'default': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/default'},
+                                                   'description': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/description'},
+                                                   'example': {},
+                                                   'externalDocs': {'$ref': '#/definitions/externalDocs'},
+                                                   'format': {'type': 'string'},
+                                                   'readOnly': {'default': False,
+                                                                'type': 'boolean'},
+                                                   'required': {'$ref': 'http://json-schema.org/draft-04/schema#/definitions/stringArray'},
+                                                   'title': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/title'},
+                                                   'type': {'enum': ['file'],
+                                                            'type': 'string'}},
+                                    'required': ['type'],
+                                    'type': 'object'},
+                     'formDataParameterSubSchema': {'additionalProperties': False,
+                                                    'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                                    'properties': {'allowEmptyValue': {'default': False,
+                                                                                       'description': 'allows '
+                                                                                                      'sending '
+                                                                                                      'a '
+                                                                                                      'parameter '
+                                                                                                      'by '
+                                                                                                      'name '
+                                                                                                      'only '
+                                                                                                      'or '
+                                                                                                      'with '
+                                                                                                      'an '
+                                                                                                      'empty '
+                                                                                                      'value.',
+                                                                                       'type': 'boolean'},
+                                                                   'collectionFormat': {'$ref': '#/definitions/collectionFormatWithMulti'},
+                                                                   'default': {'$ref': '#/definitions/default'},
+                                                                   'description': {'description': 'A '
+                                                                                                  'brief '
+                                                                                                  'description '
+                                                                                                  'of '
+                                                                                                  'the '
+                                                                                                  'parameter. '
+                                                                                                  'This '
+                                                                                                  'could '
+                                                                                                  'contain '
+                                                                                                  'examples '
+                                                                                                  'of '
+                                                                                                  'use.  '
+                                                                                                  'GitHub '
+                                                                                                  'Flavored '
+                                                                                                  'Markdown '
+                                                                                                  'is '
+                                                                                                  'allowed.',
+                                                                                   'type': 'string'},
+                                                                   'enum': {'$ref': '#/definitions/enum'},
+                                                                   'exclusiveMaximum': {'$ref': '#/definitions/exclusiveMaximum'},
+                                                                   'exclusiveMinimum': {'$ref': '#/definitions/exclusiveMinimum'},
+                                                                   'format': {'type': 'string'},
+                                                                   'in': {'description': 'Determines '
+                                                                                         'the '
+                                                                                         'location '
+                                                                                         'of '
+                                                                                         'the '
+                                                                                         'parameter.',
+                                                                          'enum': ['formData'],
+                                                                          'type': 'string'},
+                                                                   'items': {'$ref': '#/definitions/primitivesItems'},
+                                                                   'maxItems': {'$ref': '#/definitions/maxItems'},
+                                                                   'maxLength': {'$ref': '#/definitions/maxLength'},
+                                                                   'maximum': {'$ref': '#/definitions/maximum'},
+                                                                   'minItems': {'$ref': '#/definitions/minItems'},
+                                                                   'minLength': {'$ref': '#/definitions/minLength'},
+                                                                   'minimum': {'$ref': '#/definitions/minimum'},
+                                                                   'multipleOf': {'$ref': '#/definitions/multipleOf'},
+                                                                   'name': {'description': 'The '
+                                                                                           'name '
+                                                                                           'of '
+                                                                                           'the '
+                                                                                           'parameter.',
+                                                                            'type': 'string'},
+                                                                   'pattern': {'$ref': '#/definitions/pattern'},
+                                                                   'required': {'default': False,
+                                                                                'description': 'Determines '
+                                                                                               'whether '
+                                                                                               'or '
+                                                                                               'not '
+                                                                                               'this '
+                                                                                               'parameter '
+                                                                                               'is '
+                                                                                               'required '
+                                                                                               'or '
+                                                                                               'optional.',
+                                                                                'type': 'boolean'},
+                                                                   'type': {'enum': ['string',
+                                                                                     'number',
+                                                                                     'boolean',
+                                                                                     'integer',
+                                                                                     'array',
+                                                                                     'file'],
+                                                                            'type': 'string'},
+                                                                   'uniqueItems': {'$ref': '#/definitions/uniqueItems'}}},
+                     'header': {'additionalProperties': False,
+                                'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                'properties': {'collectionFormat': {'$ref': '#/definitions/collectionFormat'},
+                                               'default': {'$ref': '#/definitions/default'},
+                                               'description': {'type': 'string'},
+                                               'enum': {'$ref': '#/definitions/enum'},
+                                               'exclusiveMaximum': {'$ref': '#/definitions/exclusiveMaximum'},
+                                               'exclusiveMinimum': {'$ref': '#/definitions/exclusiveMinimum'},
+                                               'format': {'type': 'string'},
+                                               'items': {'$ref': '#/definitions/primitivesItems'},
+                                               'maxItems': {'$ref': '#/definitions/maxItems'},
+                                               'maxLength': {'$ref': '#/definitions/maxLength'},
+                                               'maximum': {'$ref': '#/definitions/maximum'},
+                                               'minItems': {'$ref': '#/definitions/minItems'},
+                                               'minLength': {'$ref': '#/definitions/minLength'},
+                                               'minimum': {'$ref': '#/definitions/minimum'},
+                                               'multipleOf': {'$ref': '#/definitions/multipleOf'},
+                                               'pattern': {'$ref': '#/definitions/pattern'},
+                                               'type': {'enum': ['string',
+                                                                 'number',
+                                                                 'integer',
+                                                                 'boolean',
+                                                                 'array'],
+                                                        'type': 'string'},
+                                               'uniqueItems': {'$ref': '#/definitions/uniqueItems'}},
+                                'required': ['type'],
+                                'type': 'object'},
+                     'headerParameterSubSchema': {'additionalProperties': False,
+                                                  'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                                  'properties': {'collectionFormat': {'$ref': '#/definitions/collectionFormat'},
+                                                                 'default': {'$ref': '#/definitions/default'},
+                                                                 'description': {'description': 'A '
+                                                                                                'brief '
+                                                                                                'description '
+                                                                                                'of '
+                                                                                                'the '
+                                                                                                'parameter. '
+                                                                                                'This '
+                                                                                                'could '
+                                                                                                'contain '
+                                                                                                'examples '
+                                                                                                'of '
+                                                                                                'use.  '
+                                                                                                'GitHub '
+                                                                                                'Flavored '
+                                                                                                'Markdown '
+                                                                                                'is '
+                                                                                                'allowed.',
+                                                                                 'type': 'string'},
+                                                                 'enum': {'$ref': '#/definitions/enum'},
+                                                                 'exclusiveMaximum': {'$ref': '#/definitions/exclusiveMaximum'},
+                                                                 'exclusiveMinimum': {'$ref': '#/definitions/exclusiveMinimum'},
+                                                                 'format': {'type': 'string'},
+                                                                 'in': {'description': 'Determines '
+                                                                                       'the '
+                                                                                       'location '
+                                                                                       'of '
+                                                                                       'the '
+                                                                                       'parameter.',
+                                                                        'enum': ['header'],
+                                                                        'type': 'string'},
+                                                                 'items': {'$ref': '#/definitions/primitivesItems'},
+                                                                 'maxItems': {'$ref': '#/definitions/maxItems'},
+                                                                 'maxLength': {'$ref': '#/definitions/maxLength'},
+                                                                 'maximum': {'$ref': '#/definitions/maximum'},
+                                                                 'minItems': {'$ref': '#/definitions/minItems'},
+                                                                 'minLength': {'$ref': '#/definitions/minLength'},
+                                                                 'minimum': {'$ref': '#/definitions/minimum'},
+                                                                 'multipleOf': {'$ref': '#/definitions/multipleOf'},
+                                                                 'name': {'description': 'The '
+                                                                                         'name '
+                                                                                         'of '
+                                                                                         'the '
+                                                                                         'parameter.',
+                                                                          'type': 'string'},
+                                                                 'pattern': {'$ref': '#/definitions/pattern'},
+                                                                 'required': {'default': False,
+                                                                              'description': 'Determines '
+                                                                                             'whether '
+                                                                                             'or '
+                                                                                             'not '
+                                                                                             'this '
+                                                                                             'parameter '
+                                                                                             'is '
+                                                                                             'required '
+                                                                                             'or '
+                                                                                             'optional.',
+                                                                              'type': 'boolean'},
+                                                                 'type': {'enum': ['string',
+                                                                                   'number',
+                                                                                   'boolean',
+                                                                                   'integer',
+                                                                                   'array'],
+                                                                          'type': 'string'},
+                                                                 'uniqueItems': {'$ref': '#/definitions/uniqueItems'}}},
+                     'headers': {'additionalProperties': {'$ref': '#/definitions/header'},
+                                 'type': 'object'},
+                     'info': {'additionalProperties': False,
+                              'description': 'General information about '
+                                             'the API.',
+                              'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                              'properties': {'contact': {'$ref': '#/definitions/contact'},
+                                             'description': {'description': 'A '
+                                                                            'longer '
+                                                                            'description '
+                                                                            'of '
+                                                                            'the '
+                                                                            'API. '
+                                                                            'Should '
+                                                                            'be '
+                                                                            'different '
+                                                                            'from '
+                                                                            'the '
+                                                                            'title.  '
+                                                                            'GitHub '
+                                                                            'Flavored '
+                                                                            'Markdown '
+                                                                            'is '
+                                                                            'allowed.',
+                                                             'type': 'string'},
+                                             'license': {'$ref': '#/definitions/license'},
+                                             'termsOfService': {'description': 'The '
+                                                                               'terms '
+                                                                               'of '
+                                                                               'service '
+                                                                               'for '
+                                                                               'the '
+                                                                               'API.',
+                                                                'type': 'string'},
+                                             'title': {'description': 'A '
+                                                                      'unique '
+                                                                      'and '
+                                                                      'precise '
+                                                                      'title '
+                                                                      'of '
+                                                                      'the '
+                                                                      'API.',
+                                                       'type': 'string'},
+                                             'version': {'description': 'A '
+                                                                        'semantic '
+                                                                        'version '
+                                                                        'number '
+                                                                        'of '
+                                                                        'the '
+                                                                        'API.',
+                                                         'type': 'string'}},
+                              'required': ['version', 'title'],
+                              'type': 'object'},
+                     'jsonReference': {'additionalProperties': False,
+                                       'properties': {'$ref': {'type': 'string'}},
+                                       'required': ['$ref'],
+                                       'type': 'object'},
+                     'license': {'additionalProperties': False,
+                                 'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                 'properties': {'name': {'description': 'The '
+                                                                        'name '
+                                                                        'of '
+                                                                        'the '
+                                                                        'license '
+                                                                        'type. '
+                                                                        "It's "
+                                                                        'encouraged '
+                                                                        'to '
+                                                                        'use '
+                                                                        'an '
+                                                                        'OSI '
+                                                                        'compatible '
+                                                                        'license.',
+                                                         'type': 'string'},
+                                                'url': {'description': 'The '
+                                                                       'URL '
+                                                                       'pointing '
+                                                                       'to '
+                                                                       'the '
+                                                                       'license.',
+                                                        'format': 'uri',
+                                                        'type': 'string'}},
+                                 'required': ['name'],
+                                 'type': 'object'},
+                     'maxItems': {'$ref': 'http://json-schema.org/draft-04/schema#/definitions/positiveInteger'},
+                     'maxLength': {'$ref': 'http://json-schema.org/draft-04/schema#/definitions/positiveInteger'},
+                     'maximum': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/maximum'},
+                     'mediaTypeList': {'items': {'$ref': '#/definitions/mimeType'},
+                                       'type': 'array',
+                                       'uniqueItems': True},
+                     'mimeType': {'description': 'The MIME type of the '
+                                                 'HTTP message.',
+                                  'type': 'string'},
+                     'minItems': {'$ref': 'http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0'},
+                     'minLength': {'$ref': 'http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0'},
+                     'minimum': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/minimum'},
+                     'multipleOf': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/multipleOf'},
+                     'nonBodyParameter': {'oneOf': [{'$ref': '#/definitions/headerParameterSubSchema'},
+                                                    {'$ref': '#/definitions/formDataParameterSubSchema'},
+                                                    {'$ref': '#/definitions/queryParameterSubSchema'},
+                                                    {'$ref': '#/definitions/pathParameterSubSchema'}],
+                                          'required': ['name',
+                                                       'in',
+                                                       'type'],
+                                          'type': 'object'},
+                     'oauth2AccessCodeSecurity': {'additionalProperties': False,
+                                                  'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                                  'properties': {'authorizationUrl': {'format': 'uri',
+                                                                                      'type': 'string'},
+                                                                 'description': {'type': 'string'},
+                                                                 'flow': {'enum': ['accessCode'],
+                                                                          'type': 'string'},
+                                                                 'scopes': {'$ref': '#/definitions/oauth2Scopes'},
+                                                                 'tokenUrl': {'format': 'uri',
+                                                                              'type': 'string'},
+                                                                 'type': {'enum': ['oauth2'],
+                                                                          'type': 'string'}},
+                                                  'required': ['type',
+                                                               'flow',
+                                                               'authorizationUrl',
+                                                               'tokenUrl'],
+                                                  'type': 'object'},
+                     'oauth2ApplicationSecurity': {'additionalProperties': False,
+                                                   'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                                   'properties': {'description': {'type': 'string'},
+                                                                  'flow': {'enum': ['application'],
+                                                                           'type': 'string'},
+                                                                  'scopes': {'$ref': '#/definitions/oauth2Scopes'},
+                                                                  'tokenUrl': {'format': 'uri',
+                                                                               'type': 'string'},
+                                                                  'type': {'enum': ['oauth2'],
+                                                                           'type': 'string'}},
+                                                   'required': ['type',
+                                                                'flow',
+                                                                'tokenUrl'],
+                                                   'type': 'object'},
+                     'oauth2ImplicitSecurity': {'additionalProperties': False,
+                                                'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                                'properties': {'authorizationUrl': {'format': 'uri',
+                                                                                    'type': 'string'},
+                                                               'description': {'type': 'string'},
+                                                               'flow': {'enum': ['implicit'],
+                                                                        'type': 'string'},
+                                                               'scopes': {'$ref': '#/definitions/oauth2Scopes'},
+                                                               'type': {'enum': ['oauth2'],
+                                                                        'type': 'string'}},
+                                                'required': ['type',
+                                                             'flow',
+                                                             'authorizationUrl'],
+                                                'type': 'object'},
+                     'oauth2PasswordSecurity': {'additionalProperties': False,
+                                                'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                                'properties': {'description': {'type': 'string'},
+                                                               'flow': {'enum': ['password'],
+                                                                        'type': 'string'},
+                                                               'scopes': {'$ref': '#/definitions/oauth2Scopes'},
+                                                               'tokenUrl': {'format': 'uri',
+                                                                            'type': 'string'},
+                                                               'type': {'enum': ['oauth2'],
+                                                                        'type': 'string'}},
+                                                'required': ['type',
+                                                             'flow',
+                                                             'tokenUrl'],
+                                                'type': 'object'},
+                     'oauth2Scopes': {'additionalProperties': {'type': 'string'},
+                                      'type': 'object'},
+                     'operation': {'additionalProperties': False,
+                                   'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                   'properties': {'consumes': {'$ref': '#/definitions/mediaTypeList',
+                                                               'description': 'A '
+                                                                              'list '
+                                                                              'of '
+                                                                              'MIME '
+                                                                              'types '
+                                                                              'the '
+                                                                              'API '
+                                                                              'can '
+                                                                              'consume.'},
+                                                  'deprecated': {'default': False,
+                                                                 'type': 'boolean'},
+                                                  'description': {'description': 'A '
+                                                                                 'longer '
+                                                                                 'description '
+                                                                                 'of '
+                                                                                 'the '
+                                                                                 'operation, '
+                                                                                 'GitHub '
+                                                                                 'Flavored '
+                                                                                 'Markdown '
+                                                                                 'is '
+                                                                                 'allowed.',
+                                                                  'type': 'string'},
+                                                  'externalDocs': {'$ref': '#/definitions/externalDocs'},
+                                                  'operationId': {'description': 'A '
+                                                                                 'unique '
+                                                                                 'identifier '
+                                                                                 'of '
+                                                                                 'the '
+                                                                                 'operation.',
+                                                                  'type': 'string'},
+                                                  'parameters': {'$ref': '#/definitions/parametersList'},
+                                                  'produces': {'$ref': '#/definitions/mediaTypeList',
+                                                               'description': 'A '
+                                                                              'list '
+                                                                              'of '
+                                                                              'MIME '
+                                                                              'types '
+                                                                              'the '
+                                                                              'API '
+                                                                              'can '
+                                                                              'produce.'},
+                                                  'responses': {'$ref': '#/definitions/responses'},
+                                                  'schemes': {'$ref': '#/definitions/schemesList'},
+                                                  'security': {'$ref': '#/definitions/security'},
+                                                  'summary': {'description': 'A '
+                                                                             'brief '
+                                                                             'summary '
+                                                                             'of '
+                                                                             'the '
+                                                                             'operation.',
+                                                              'type': 'string'},
+                                                  'tags': {'items': {'type': 'string'},
+                                                           'type': 'array',
+                                                           'uniqueItems': True}},
+                                   'required': ['responses'],
+                                   'type': 'object'},
+                     'parameter': {'oneOf': [{'$ref': '#/definitions/bodyParameter'},
+                                             {'$ref': '#/definitions/nonBodyParameter'}]},
+                     'parameterDefinitions': {'additionalProperties': {'$ref': '#/definitions/parameter'},
+                                              'description': 'One or more '
+                                                             'JSON '
+                                                             'representations '
+                                                             'for '
+                                                             'parameters',
+                                              'type': 'object'},
+                     'parametersList': {'additionalItems': False,
+                                        'description': 'The parameters '
+                                                       'needed to send a '
+                                                       'valid API call.',
+                                        'items': {'oneOf': [{'$ref': '#/definitions/parameter'},
+                                                            {'$ref': '#/definitions/jsonReference'}]},
+                                        'type': 'array',
+                                        'uniqueItems': True},
+                     'pathItem': {'additionalProperties': False,
+                                  'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                  'properties': {'$ref': {'type': 'string'},
+                                                 'delete': {'$ref': '#/definitions/operation'},
+                                                 'get': {'$ref': '#/definitions/operation'},
+                                                 'head': {'$ref': '#/definitions/operation'},
+                                                 'options': {'$ref': '#/definitions/operation'},
+                                                 'parameters': {'$ref': '#/definitions/parametersList'},
+                                                 'patch': {'$ref': '#/definitions/operation'},
+                                                 'post': {'$ref': '#/definitions/operation'},
+                                                 'put': {'$ref': '#/definitions/operation'}},
+                                  'type': 'object'},
+                     'pathParameterSubSchema': {'additionalProperties': False,
+                                                'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                                'properties': {'collectionFormat': {'$ref': '#/definitions/collectionFormat'},
+                                                               'default': {'$ref': '#/definitions/default'},
+                                                               'description': {'description': 'A '
+                                                                                              'brief '
+                                                                                              'description '
+                                                                                              'of '
+                                                                                              'the '
+                                                                                              'parameter. '
+                                                                                              'This '
+                                                                                              'could '
+                                                                                              'contain '
+                                                                                              'examples '
+                                                                                              'of '
+                                                                                              'use.  '
+                                                                                              'GitHub '
+                                                                                              'Flavored '
+                                                                                              'Markdown '
+                                                                                              'is '
+                                                                                              'allowed.',
+                                                                               'type': 'string'},
+                                                               'enum': {'$ref': '#/definitions/enum'},
+                                                               'exclusiveMaximum': {'$ref': '#/definitions/exclusiveMaximum'},
+                                                               'exclusiveMinimum': {'$ref': '#/definitions/exclusiveMinimum'},
+                                                               'format': {'type': 'string'},
+                                                               'in': {'description': 'Determines '
+                                                                                     'the '
+                                                                                     'location '
+                                                                                     'of '
+                                                                                     'the '
+                                                                                     'parameter.',
+                                                                      'enum': ['path'],
+                                                                      'type': 'string'},
+                                                               'items': {'$ref': '#/definitions/primitivesItems'},
+                                                               'maxItems': {'$ref': '#/definitions/maxItems'},
+                                                               'maxLength': {'$ref': '#/definitions/maxLength'},
+                                                               'maximum': {'$ref': '#/definitions/maximum'},
+                                                               'minItems': {'$ref': '#/definitions/minItems'},
+                                                               'minLength': {'$ref': '#/definitions/minLength'},
+                                                               'minimum': {'$ref': '#/definitions/minimum'},
+                                                               'multipleOf': {'$ref': '#/definitions/multipleOf'},
+                                                               'name': {'description': 'The '
+                                                                                       'name '
+                                                                                       'of '
+                                                                                       'the '
+                                                                                       'parameter.',
+                                                                        'type': 'string'},
+                                                               'pattern': {'$ref': '#/definitions/pattern'},
+                                                               'required': {'description': 'Determines '
+                                                                                           'whether '
+                                                                                           'or '
+                                                                                           'not '
+                                                                                           'this '
+                                                                                           'parameter '
+                                                                                           'is '
+                                                                                           'required '
+                                                                                           'or '
+                                                                                           'optional.',
+                                                                            'enum': [True],
+                                                                            'type': 'boolean'},
+                                                               'type': {'enum': ['string',
+                                                                                 'number',
+                                                                                 'boolean',
+                                                                                 'integer',
+                                                                                 'array'],
+                                                                        'type': 'string'},
+                                                               'uniqueItems': {'$ref': '#/definitions/uniqueItems'}},
+                                                'required': ['required']},
+                     'paths': {'additionalProperties': False,
+                               'description': 'Relative paths to the '
+                                              'individual endpoints. They '
+                                              'must be relative to the '
+                                              "'basePath'.",
+                               'patternProperties': {'^/': {'$ref': '#/definitions/pathItem'},
+                                                     '^x-': {'$ref': '#/definitions/vendorExtension'}},
+                               'type': 'object'},
+                     'pattern': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/pattern'},
+                     'primitivesItems': {'additionalProperties': False,
+                                         'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                         'properties': {'collectionFormat': {'$ref': '#/definitions/collectionFormat'},
+                                                        'default': {'$ref': '#/definitions/default'},
+                                                        'enum': {'$ref': '#/definitions/enum'},
+                                                        'exclusiveMaximum': {'$ref': '#/definitions/exclusiveMaximum'},
+                                                        'exclusiveMinimum': {'$ref': '#/definitions/exclusiveMinimum'},
+                                                        'format': {'type': 'string'},
+                                                        'items': {'$ref': '#/definitions/primitivesItems'},
+                                                        'maxItems': {'$ref': '#/definitions/maxItems'},
+                                                        'maxLength': {'$ref': '#/definitions/maxLength'},
+                                                        'maximum': {'$ref': '#/definitions/maximum'},
+                                                        'minItems': {'$ref': '#/definitions/minItems'},
+                                                        'minLength': {'$ref': '#/definitions/minLength'},
+                                                        'minimum': {'$ref': '#/definitions/minimum'},
+                                                        'multipleOf': {'$ref': '#/definitions/multipleOf'},
+                                                        'pattern': {'$ref': '#/definitions/pattern'},
+                                                        'type': {'enum': ['string',
+                                                                          'number',
+                                                                          'integer',
+                                                                          'boolean',
+                                                                          'array'],
+                                                                 'type': 'string'},
+                                                        'uniqueItems': {'$ref': '#/definitions/uniqueItems'}},
+                                         'type': 'object'},
+                     'queryParameterSubSchema': {'additionalProperties': False,
+                                                 'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                                 'properties': {'allowEmptyValue': {'default': False,
+                                                                                    'description': 'allows '
+                                                                                                   'sending '
+                                                                                                   'a '
+                                                                                                   'parameter '
+                                                                                                   'by '
+                                                                                                   'name '
+                                                                                                   'only '
+                                                                                                   'or '
+                                                                                                   'with '
+                                                                                                   'an '
+                                                                                                   'empty '
+                                                                                                   'value.',
+                                                                                    'type': 'boolean'},
+                                                                'collectionFormat': {'$ref': '#/definitions/collectionFormatWithMulti'},
+                                                                'default': {'$ref': '#/definitions/default'},
+                                                                'description': {'description': 'A '
+                                                                                               'brief '
+                                                                                               'description '
+                                                                                               'of '
+                                                                                               'the '
+                                                                                               'parameter. '
+                                                                                               'This '
+                                                                                               'could '
+                                                                                               'contain '
+                                                                                               'examples '
+                                                                                               'of '
+                                                                                               'use.  '
+                                                                                               'GitHub '
+                                                                                               'Flavored '
+                                                                                               'Markdown '
+                                                                                               'is '
+                                                                                               'allowed.',
+                                                                                'type': 'string'},
+                                                                'enum': {'$ref': '#/definitions/enum'},
+                                                                'exclusiveMaximum': {'$ref': '#/definitions/exclusiveMaximum'},
+                                                                'exclusiveMinimum': {'$ref': '#/definitions/exclusiveMinimum'},
+                                                                'format': {'type': 'string'},
+                                                                'in': {'description': 'Determines '
+                                                                                      'the '
+                                                                                      'location '
+                                                                                      'of '
+                                                                                      'the '
+                                                                                      'parameter.',
+                                                                       'enum': ['query'],
+                                                                       'type': 'string'},
+                                                                'items': {'$ref': '#/definitions/primitivesItems'},
+                                                                'maxItems': {'$ref': '#/definitions/maxItems'},
+                                                                'maxLength': {'$ref': '#/definitions/maxLength'},
+                                                                'maximum': {'$ref': '#/definitions/maximum'},
+                                                                'minItems': {'$ref': '#/definitions/minItems'},
+                                                                'minLength': {'$ref': '#/definitions/minLength'},
+                                                                'minimum': {'$ref': '#/definitions/minimum'},
+                                                                'multipleOf': {'$ref': '#/definitions/multipleOf'},
+                                                                'name': {'description': 'The '
+                                                                                        'name '
+                                                                                        'of '
+                                                                                        'the '
+                                                                                        'parameter.',
+                                                                         'type': 'string'},
+                                                                'pattern': {'$ref': '#/definitions/pattern'},
+                                                                'required': {'default': False,
+                                                                             'description': 'Determines '
+                                                                                            'whether '
+                                                                                            'or '
+                                                                                            'not '
+                                                                                            'this '
+                                                                                            'parameter '
+                                                                                            'is '
+                                                                                            'required '
+                                                                                            'or '
+                                                                                            'optional.',
+                                                                             'type': 'boolean'},
+                                                                'type': {'enum': ['string',
+                                                                                  'number',
+                                                                                  'boolean',
+                                                                                  'integer',
+                                                                                  'array'],
+                                                                         'type': 'string'},
+                                                                'uniqueItems': {'$ref': '#/definitions/uniqueItems'}}},
+                     'response': {'additionalProperties': False,
+                                  'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                  'properties': {'description': {'type': 'string'},
+                                                 'examples': {'$ref': '#/definitions/examples'},
+                                                 'headers': {'$ref': '#/definitions/headers'},
+                                                 'schema': {'oneOf': [{'$ref': '#/definitions/schema'},
+                                                                      {'$ref': '#/definitions/fileSchema'}]}},
+                                  'required': ['description'],
+                                  'type': 'object'},
+                     'responseDefinitions': {'additionalProperties': {'$ref': '#/definitions/response'},
+                                             'description': 'One or more '
+                                                            'JSON '
+                                                            'representations '
+                                                            'for '
+                                                            'parameters',
+                                             'type': 'object'},
+                     'responseValue': {'oneOf': [{'$ref': '#/definitions/response'},
+                                                 {'$ref': '#/definitions/jsonReference'}]},
+                     'responses': {'additionalProperties': False,
+                                   'description': 'Response objects names '
+                                                  'can either be any valid '
+                                                  'HTTP status code or '
+                                                  "'default'.",
+                                   'minProperties': 1,
+                                   'not': {'additionalProperties': False,
+                                           'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                           'type': 'object'},
+                                   'patternProperties': {'^([0-9]{3})$|^(default)$': {'$ref': '#/definitions/responseValue'},
+                                                         '^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                   'type': 'object'},
+                     'schema': {'additionalProperties': False,
+                                'description': 'A deterministic version of '
+                                               'a JSON Schema object.',
+                                'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                                'properties': {'$ref': {'type': 'string'},
+                                               'additionalProperties': {'anyOf': [{'$ref': '#/definitions/schema'},
+                                                                                  {'type': 'boolean'}],
+                                                                        'default': {}},
+                                               'allOf': {'items': {'$ref': '#/definitions/schema'},
+                                                         'minItems': 1,
+                                                         'type': 'array'},
+                                               'default': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/default'},
+                                               'description': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/description'},
+                                               'discriminator': {'type': 'string'},
+                                               'enum': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/enum'},
+                                               'example': {},
+                                               'exclusiveMaximum': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/exclusiveMaximum'},
+                                               'exclusiveMinimum': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/exclusiveMinimum'},
+                                               'externalDocs': {'$ref': '#/definitions/externalDocs'},
+                                               'format': {'type': 'string'},
+                                               'items': {'anyOf': [{'$ref': '#/definitions/schema'},
+                                                                   {'items': {'$ref': '#/definitions/schema'},
+                                                                    'minItems': 1,
+                                                                    'type': 'array'}],
+                                                         'default': {}},
+                                               'maxItems': {'$ref': 'http://json-schema.org/draft-04/schema#/definitions/positiveInteger'},
+                                               'maxLength': {'$ref': 'http://json-schema.org/draft-04/schema#/definitions/positiveInteger'},
+                                               'maxProperties': {'$ref': 'http://json-schema.org/draft-04/schema#/definitions/positiveInteger'},
+                                               'maximum': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/maximum'},
+                                               'minItems': {'$ref': 'http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0'},
+                                               'minLength': {'$ref': 'http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0'},
+                                               'minProperties': {'$ref': 'http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0'},
+                                               'minimum': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/minimum'},
+                                               'multipleOf': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/multipleOf'},
+                                               'pattern': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/pattern'},
+                                               'properties': {'additionalProperties': {'$ref': '#/definitions/schema'},
+                                                              'default': {},
+                                                              'type': 'object'},
+                                               'readOnly': {'default': False,
+                                                            'type': 'boolean'},
+                                               'required': {'$ref': 'http://json-schema.org/draft-04/schema#/definitions/stringArray'},
+                                               'title': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/title'},
+                                               'type': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/type'},
+                                               'uniqueItems': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/uniqueItems'},
+                                               'xml': {'$ref': '#/definitions/xml'}},
+                                'type': 'object'},
+                     'schemesList': {'description': 'The transfer protocol '
+                                                    'of the API.',
+                                     'items': {'enum': ['http',
+                                                        'https',
+                                                        'ws',
+                                                        'wss'],
+                                               'type': 'string'},
+                                     'type': 'array',
+                                     'uniqueItems': True},
+                     'security': {'items': {'$ref': '#/definitions/securityRequirement'},
+                                  'type': 'array',
+                                  'uniqueItems': True},
+                     'securityDefinitions': {'additionalProperties': {'oneOf': [{'$ref': '#/definitions/basicAuthenticationSecurity'},
+                                                                                {'$ref': '#/definitions/apiKeySecurity'},
+                                                                                {'$ref': '#/definitions/oauth2ImplicitSecurity'},
+                                                                                {'$ref': '#/definitions/oauth2PasswordSecurity'},
+                                                                                {'$ref': '#/definitions/oauth2ApplicationSecurity'},
+                                                                                {'$ref': '#/definitions/oauth2AccessCodeSecurity'}]},
+                                             'type': 'object'},
+                     'securityRequirement': {'additionalProperties': {'items': {'type': 'string'},
+                                                                      'type': 'array',
+                                                                      'uniqueItems': True},
+                                             'type': 'object'},
+                     'tag': {'additionalProperties': False,
+                             'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                             'properties': {'description': {'type': 'string'},
+                                            'externalDocs': {'$ref': '#/definitions/externalDocs'},
+                                            'name': {'type': 'string'}},
+                             'required': ['name'],
+                             'type': 'object'},
+                     'title': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/title'},
+                     'uniqueItems': {'$ref': 'http://json-schema.org/draft-04/schema#/properties/uniqueItems'},
+                     'vendorExtension': {'additionalItems': True,
+                                         'additionalProperties': True,
+                                         'description': 'Any property '
+                                                        'starting with x- '
+                                                        'is valid.'},
+                     'xml': {'additionalProperties': False,
+                             'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+                             'properties': {'attribute': {'default': False,
+                                                          'type': 'boolean'},
+                                            'name': {'type': 'string'},
+                                            'namespace': {'type': 'string'},
+                                            'prefix': {'type': 'string'},
+                                            'wrapped': {'default': False,
+                                                        'type': 'boolean'}},
+                             'type': 'object'}},
+     'patternProperties': {'^x-': {'$ref': '#/definitions/vendorExtension'}},
+     'properties': {'basePath': {'description': 'The base path to the API. '
+                                                "Example: '/api'.",
+                                 'pattern': '^/',
+                                 'type': 'string'},
+                    'consumes': {'$ref': '#/definitions/mediaTypeList',
+                                 'description': 'A list of MIME types '
+                                                'accepted by the API.'},
+                    'definitions': {'$ref': '#/definitions/definitions'},
+                    'externalDocs': {'$ref': '#/definitions/externalDocs'},
+                    'host': {'description': 'The host (name or ip) of the '
+                                            "API. Example: 'swagger.io'",
+                             'pattern': '^[^{}/ :\\\\]+(?::\\d+)?$',
+                             'type': 'string'},
+                    'info': {'$ref': '#/definitions/info'},
+                    'parameters': {'$ref': '#/definitions/parameterDefinitions'},
+                    'paths': {'$ref': '#/definitions/paths'},
+                    'produces': {'$ref': '#/definitions/mediaTypeList',
+                                 'description': 'A list of MIME types the '
+                                                'API can produce.'},
+                    'responses': {'$ref': '#/definitions/responseDefinitions'},
+                    'schemes': {'$ref': '#/definitions/schemesList'},
+                    'security': {'$ref': '#/definitions/security'},
+                    'securityDefinitions': {'$ref': '#/definitions/securityDefinitions'},
+                    'swagger': {'description': 'The Swagger version of '
+                                               'this document.',
+                                'enum': ['2.0'],
+                                'type': 'string'},
+                    'tags': {'items': {'$ref': '#/definitions/tag'},
+                             'type': 'array',
+                             'uniqueItems': True}},
+     'required': ['swagger', 'info', 'paths'],
+     'title': 'A JSON Schema for Swagger 2.0 API.',
+     'type': 'object'}
+
+On instance:
+    {'components': {'parameters': {'Authorization': {'description': '提供 '
+                                                                    'JWT '
+                                                                    'Token, '
+                                                                    '格式 '
+                                                                    '`"Bearer '
+                                                                    '{TOKEN}"`',
+                                                     'in': 'header',
+                                                     'name': 'Authorization',
+                                                     'required': True,
+                                                     'schema': {'type': 'string'}}},
+                    'schemas': {'DefaultErrorResponse': {'properties': {'data': {'properties': {'exc_info': {'description': '详细错误信息',
+                                                                                                             'type': 'string'},
+                                                                                                'status_code': {'description': '错误码',
+                                                                                                                'type': 'integer'}},
+                                                                                 'type': 'object'},
+                                                                        'errors': {'description': '有多个错误值时（通常发生在验证表单失败时）',
+                                                                                   'type': 'string'},
+                                                                        'message': {'description': '错误描述信息',
+                                                                                    'type': 'string'},
+                                                                        'status': {'description': '错误字符串',
+                                                                                   'type': 'string'}},
+                                                         'required': ['status'],
+                                                         'type': 'object'},
+                                'DefaultSuccessResponse': {'properties': {'status': {'default': 'success',
+                                                                                     'description': '接口调用结果',
+                                                                                     'type': 'string'}},
+                                                           'required': ['status'],
+                                                           'type': 'object'},
+                                'Status': {'default': 'success',
+                                           'description': '接口请求结果\n'
+                                                          '\n'
+                                                          '- `success` '
+                                                          '表示成功\n'
+                                                          '- 其他表示错误\n',
+                                           'type': 'string'}},
+                    'securitySchemes': {'name': {'bearerFormat': 'JWT',
+                                                 'scheme': 'bearer',
+                                                 'type': 'http'}}},
+     'info': {'description': '注意\n\n1. 时间字符串，如无特殊说明，皆为 RFC3339 UTC\n',
+              'title': '工作人员小程序端 API',
+              'version': '1.0.0'},
+     'openapi': '3.0.2',
+     'paths': {'/': {'get': {'responses': {'200': {'description': 'OK'}},
+                             'summary': '返回 YAML 格式的接口文档'}},
+               '/npr': {'post': {'requestBody': {'content': {'application/json': {'schema': {'additionalProperties': False,
+                                                                                             'properties': {'url': {'description': '车牌图片地址',
+                                                                                                                    'type': 'string'}},
+                                                                                             'required': ['url'],
+                                                                                             'type': 'object'}}},
+                                                 'required': True},
+                                 'responses': {'200': {'content': {'application/json': {'schema': {'properties': {'data': {'properties': {'np': {'description': '车牌',
+                                                                                                                                                 'type': 'string'}},
+                                                                                                                           'type': 'object'},
+                                                                                                                  'status': {'description': 'success',
+                                                                                                                             'type': 'string'}},
+                                                                                                   'type': 'object'}}},
+                                                       'description': 'OK'}},
+                                 'summary': '识别车牌',
+                                 'tags': ['npr']}}},
+     'servers': [{'description': '本地开发环境',
+                  'url': 'https://localhost:3000'}],
+     'tags': [{'description': '车牌识别', 'name': 'npr'}]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/nose2/plugins/loader/discovery.py", line 201, in _find_tests_in_file
+    module = util.module_from_name(module_name)
+  File "/usr/local/lib/python3.7/site-packages/nose2/util.py", line 77, in module_from_name
+    __import__(name)
+  File "/work/tests/api_testing/test_default.py", line 4, in &lt;module&gt;
+    from .base import BaseTestCase
+  File "/work/tests/api_testing/base.py", line 11, in &lt;module&gt;
+    from codebase.utils.swaggerui import api
+  File "/work/src/codebase/utils/swaggerui.py", line 28, in &lt;module&gt;
+    api = Api()
+  File "/work/src/codebase/utils/swaggerui.py", line 19, in __init__
+    self.spec = Spec.from_dict(self.spec_dict)
+  File "/usr/local/lib/python3.7/site-packages/bravado_core/spec.py", line 181, in from_dict
+    spec.build()
+  File "/usr/local/lib/python3.7/site-packages/bravado_core/spec.py", line 193, in build
+    self._validate_spec()
+  File "/usr/local/lib/python3.7/site-packages/bravado_core/spec.py", line 189, in _validate_spec
+    http_handlers=self.get_ref_handlers(),
+  File "/usr/local/lib/python3.7/site-packages/swagger_spec_validator/validator20.py", line 163, in validate_spec
+    http_handlers=http_handlers,
+  File "/usr/local/lib/python3.7/site-packages/swagger_spec_validator/common.py", line 29, in wrapper
+    sys.exc_info()[2])
+  File "/usr/local/lib/python3.7/site-packages/six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.7/site-packages/swagger_spec_validator/common.py", line 24, in wrapper
+    return method(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/swagger_spec_validator/validator20.py", line 215, in validate_json
+    cls=Draft4Validator,
+  File "/usr/local/lib/python3.7/site-packages/swagger_spec_validator/ref_validators.py", line 52, in validate
+    instance_cls(schema, *args, **kwargs).validate(instance)
+  File "/usr/local/lib/python3.7/site-packages/jsonschema/validators.py", line 348, in validate
+    raise error
+swagger_spec_validator.common.SwaggerValidationError: ('\'components\', \'openapi\', \'servers\' do not match any of the regexes: \'^x-\'\n\nFailed validating \'additionalProperties\' in schema:\n    {\'$schema\': \'http://json-schema.org/draft-04/schema#\',\n     \'additionalProperties\': False,\n     \'definitions\': {\'apiKeySecurity\': {\'additionalProperties\': False,\n                                        \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                        \'properties\': {\'description\': {\'type\': \'string\'},\n                                                       \'in\': {\'enum\': [\'header\',\n                                                                       \'query\'],\n                                                              \'type\': \'string\'},\n                                                       \'name\': {\'type\': \'string\'},\n                                                       \'type\': {\'enum\': [\'apiKey\'],\n                                                                \'type\': \'string\'}},\n                                        \'required\': [\'type\', \'name\', \'in\'],\n                                        \'type\': \'object\'},\n                     \'basicAuthenticationSecurity\': {\'additionalProperties\': False,\n                                                     \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                                     \'properties\': {\'description\': {\'type\': \'string\'},\n                                                                    \'type\': {\'enum\': [\'basic\'],\n                                                                             \'type\': \'string\'}},\n                                                     \'required\': [\'type\'],\n                                                     \'type\': \'object\'},\n                     \'bodyParameter\': {\'additionalProperties\': False,\n                                       \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                       \'properties\': {\'description\': {\'description\': \'A \'\n                                                                                     \'brief \'\n                                                                                     \'description \'\n                                                                                     \'of \'\n                                                                                     \'the \'\n                                                                                     \'parameter. \'\n                                                                                     \'This \'\n                                                                                     \'could \'\n                                                                                     \'contain \'\n                                                                                     \'examples \'\n                                                                                     \'of \'\n                                                                                     \'use.  \'\n                                                                                     \'GitHub \'\n                                                                                     \'Flavored \'\n                                                                                     \'Markdown \'\n                                                                                     \'is \'\n                                                                                     \'allowed.\',\n                                                                      \'type\': \'string\'},\n                                                      \'in\': {\'description\': \'Determines \'\n                                                                            \'the \'\n                                                                            \'location \'\n                                                                            \'of \'\n                                                                            \'the \'\n                                                                            \'parameter.\',\n                                                             \'enum\': [\'body\'],\n                                                             \'type\': \'string\'},\n                                                      \'name\': {\'description\': \'The \'\n                                                                              \'name \'\n                                                                              \'of \'\n                                                                              \'the \'\n                                                                              \'parameter.\',\n                                                               \'type\': \'string\'},\n                                                      \'required\': {\'default\': False,\n                                                                   \'description\': \'Determines \'\n                                                                                  \'whether \'\n                                                                                  \'or \'\n                                                                                  \'not \'\n                                                                                  \'this \'\n                                                                                  \'parameter \'\n                                                                                  \'is \'\n                                                                                  \'required \'\n                                                                                  \'or \'\n                                                                                  \'optional.\',\n                                                                   \'type\': \'boolean\'},\n                                                      \'schema\': {\'$ref\': \'#/definitions/schema\'}},\n                                       \'required\': [\'name\', \'in\', \'schema\'],\n                                       \'type\': \'object\'},\n                     \'collectionFormat\': {\'default\': \'csv\',\n                                          \'enum\': [\'csv\',\n                                                   \'ssv\',\n                                                   \'tsv\',\n                                                   \'pipes\'],\n                                          \'type\': \'string\'},\n                     \'collectionFormatWithMulti\': {\'default\': \'csv\',\n                                                   \'enum\': [\'csv\',\n                                                            \'ssv\',\n                                                            \'tsv\',\n                                                            \'pipes\',\n                                                            \'multi\'],\n                                                   \'type\': \'string\'},\n                     \'contact\': {\'additionalProperties\': False,\n                                 \'description\': \'Contact information for \'\n                                                \'the owners of the API.\',\n                                 \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                 \'properties\': {\'email\': {\'description\': \'The \'\n                                                                         \'email \'\n                                                                         \'address \'\n                                                                         \'of \'\n                                                                         \'the \'\n                                                                         \'contact \'\n                                                                         \'person/organization.\',\n                                                          \'format\': \'email\',\n                                                          \'type\': \'string\'},\n                                                \'name\': {\'description\': \'The \'\n                                                                        \'identifying \'\n                                                                        \'name \'\n                                                                        \'of \'\n                                                                        \'the \'\n                                                                        \'contact \'\n                                                                        \'person/organization.\',\n                                                         \'type\': \'string\'},\n                                                \'url\': {\'description\': \'The \'\n                                                                       \'URL \'\n                                                                       \'pointing \'\n                                                                       \'to \'\n                                                                       \'the \'\n                                                                       \'contact \'\n                                                                       \'information.\',\n                                                        \'format\': \'uri\',\n                                                        \'type\': \'string\'}},\n                                 \'type\': \'object\'},\n                     \'default\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/default\'},\n                     \'definitions\': {\'additionalProperties\': {\'$ref\': \'#/definitions/schema\'},\n                                     \'description\': \'One or more JSON \'\n                                                    \'objects describing \'\n                                                    \'the schemas being \'\n                                                    \'consumed and produced \'\n                                                    \'by the API.\',\n                                     \'type\': \'object\'},\n                     \'description\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/description\'},\n                     \'enum\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/enum\'},\n                     \'examples\': {\'additionalProperties\': True,\n                                  \'type\': \'object\'},\n                     \'exclusiveMaximum\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/exclusiveMaximum\'},\n                     \'exclusiveMinimum\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/exclusiveMinimum\'},\n                     \'externalDocs\': {\'additionalProperties\': False,\n                                      \'description\': \'information about \'\n                                                     \'external \'\n                                                     \'documentation\',\n                                      \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                      \'properties\': {\'description\': {\'type\': \'string\'},\n                                                     \'url\': {\'format\': \'uri\',\n                                                             \'type\': \'string\'}},\n                                      \'required\': [\'url\'],\n                                      \'type\': \'object\'},\n                     \'fileSchema\': {\'additionalProperties\': False,\n                                    \'description\': \'A deterministic \'\n                                                   \'version of a JSON \'\n                                                   \'Schema object.\',\n                                    \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                    \'properties\': {\'default\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/default\'},\n                                                   \'description\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/description\'},\n                                                   \'example\': {},\n                                                   \'externalDocs\': {\'$ref\': \'#/definitions/externalDocs\'},\n                                                   \'format\': {\'type\': \'string\'},\n                                                   \'readOnly\': {\'default\': False,\n                                                                \'type\': \'boolean\'},\n                                                   \'required\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/definitions/stringArray\'},\n                                                   \'title\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/title\'},\n                                                   \'type\': {\'enum\': [\'file\'],\n                                                            \'type\': \'string\'}},\n                                    \'required\': [\'type\'],\n                                    \'type\': \'object\'},\n                     \'formDataParameterSubSchema\': {\'additionalProperties\': False,\n                                                    \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                                    \'properties\': {\'allowEmptyValue\': {\'default\': False,\n                                                                                       \'description\': \'allows \'\n                                                                                                      \'sending \'\n                                                                                                      \'a \'\n                                                                                                      \'parameter \'\n                                                                                                      \'by \'\n                                                                                                      \'name \'\n                                                                                                      \'only \'\n                                                                                                      \'or \'\n                                                                                                      \'with \'\n                                                                                                      \'an \'\n                                                                                                      \'empty \'\n                                                                                                      \'value.\',\n                                                                                       \'type\': \'boolean\'},\n                                                                   \'collectionFormat\': {\'$ref\': \'#/definitions/collectionFormatWithMulti\'},\n                                                                   \'default\': {\'$ref\': \'#/definitions/default\'},\n                                                                   \'description\': {\'description\': \'A \'\n                                                                                                  \'brief \'\n                                                                                                  \'description \'\n                                                                                                  \'of \'\n                                                                                                  \'the \'\n                                                                                                  \'parameter. \'\n                                                                                                  \'This \'\n                                                                                                  \'could \'\n                                                                                                  \'contain \'\n                                                                                                  \'examples \'\n                                                                                                  \'of \'\n                                                                                                  \'use.  \'\n                                                                                                  \'GitHub \'\n                                                                                                  \'Flavored \'\n                                                                                                  \'Markdown \'\n                                                                                                  \'is \'\n                                                                                                  \'allowed.\',\n                                                                                   \'type\': \'string\'},\n                                                                   \'enum\': {\'$ref\': \'#/definitions/enum\'},\n                                                                   \'exclusiveMaximum\': {\'$ref\': \'#/definitions/exclusiveMaximum\'},\n                                                                   \'exclusiveMinimum\': {\'$ref\': \'#/definitions/exclusiveMinimum\'},\n                                                                   \'format\': {\'type\': \'string\'},\n                                                                   \'in\': {\'description\': \'Determines \'\n                                                                                         \'the \'\n                                                                                         \'location \'\n                                                                                         \'of \'\n                                                                                         \'the \'\n                                                                                         \'parameter.\',\n                                                                          \'enum\': [\'formData\'],\n                                                                          \'type\': \'string\'},\n                                                                   \'items\': {\'$ref\': \'#/definitions/primitivesItems\'},\n                                                                   \'maxItems\': {\'$ref\': \'#/definitions/maxItems\'},\n                                                                   \'maxLength\': {\'$ref\': \'#/definitions/maxLength\'},\n                                                                   \'maximum\': {\'$ref\': \'#/definitions/maximum\'},\n                                                                   \'minItems\': {\'$ref\': \'#/definitions/minItems\'},\n                                                                   \'minLength\': {\'$ref\': \'#/definitions/minLength\'},\n                                                                   \'minimum\': {\'$ref\': \'#/definitions/minimum\'},\n                                                                   \'multipleOf\': {\'$ref\': \'#/definitions/multipleOf\'},\n                                                                   \'name\': {\'description\': \'The \'\n                                                                                           \'name \'\n                                                                                           \'of \'\n                                                                                           \'the \'\n                                                                                           \'parameter.\',\n                                                                            \'type\': \'string\'},\n                                                                   \'pattern\': {\'$ref\': \'#/definitions/pattern\'},\n                                                                   \'required\': {\'default\': False,\n                                                                                \'description\': \'Determines \'\n                                                                                               \'whether \'\n                                                                                               \'or \'\n                                                                                               \'not \'\n                                                                                               \'this \'\n                                                                                               \'parameter \'\n                                                                                               \'is \'\n                                                                                               \'required \'\n                                                                                               \'or \'\n                                                                                               \'optional.\',\n                                                                                \'type\': \'boolean\'},\n                                                                   \'type\': {\'enum\': [\'string\',\n                                                                                     \'number\',\n                                                                                     \'boolean\',\n                                                                                     \'integer\',\n                                                                                     \'array\',\n                                                                                     \'file\'],\n                                                                            \'type\': \'string\'},\n                                                                   \'uniqueItems\': {\'$ref\': \'#/definitions/uniqueItems\'}}},\n                     \'header\': {\'additionalProperties\': False,\n                                \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                \'properties\': {\'collectionFormat\': {\'$ref\': \'#/definitions/collectionFormat\'},\n                                               \'default\': {\'$ref\': \'#/definitions/default\'},\n                                               \'description\': {\'type\': \'string\'},\n                                               \'enum\': {\'$ref\': \'#/definitions/enum\'},\n                                               \'exclusiveMaximum\': {\'$ref\': \'#/definitions/exclusiveMaximum\'},\n                                               \'exclusiveMinimum\': {\'$ref\': \'#/definitions/exclusiveMinimum\'},\n                                               \'format\': {\'type\': \'string\'},\n                                               \'items\': {\'$ref\': \'#/definitions/primitivesItems\'},\n                                               \'maxItems\': {\'$ref\': \'#/definitions/maxItems\'},\n                                               \'maxLength\': {\'$ref\': \'#/definitions/maxLength\'},\n                                               \'maximum\': {\'$ref\': \'#/definitions/maximum\'},\n                                               \'minItems\': {\'$ref\': \'#/definitions/minItems\'},\n                                               \'minLength\': {\'$ref\': \'#/definitions/minLength\'},\n                                               \'minimum\': {\'$ref\': \'#/definitions/minimum\'},\n                                               \'multipleOf\': {\'$ref\': \'#/definitions/multipleOf\'},\n                                               \'pattern\': {\'$ref\': \'#/definitions/pattern\'},\n                                               \'type\': {\'enum\': [\'string\',\n                                                                 \'number\',\n                                                                 \'integer\',\n                                                                 \'boolean\',\n                                                                 \'array\'],\n                                                        \'type\': \'string\'},\n                                               \'uniqueItems\': {\'$ref\': \'#/definitions/uniqueItems\'}},\n                                \'required\': [\'type\'],\n                                \'type\': \'object\'},\n                     \'headerParameterSubSchema\': {\'additionalProperties\': False,\n                                                  \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                                  \'properties\': {\'collectionFormat\': {\'$ref\': \'#/definitions/collectionFormat\'},\n                                                                 \'default\': {\'$ref\': \'#/definitions/default\'},\n                                                                 \'description\': {\'description\': \'A \'\n                                                                                                \'brief \'\n                                                                                                \'description \'\n                                                                                                \'of \'\n                                                                                                \'the \'\n                                                                                                \'parameter. \'\n                                                                                                \'This \'\n                                                                                                \'could \'\n                                                                                                \'contain \'\n                                                                                                \'examples \'\n                                                                                                \'of \'\n                                                                                                \'use.  \'\n                                                                                                \'GitHub \'\n                                                                                                \'Flavored \'\n                                                                                                \'Markdown \'\n                                                                                                \'is \'\n                                                                                                \'allowed.\',\n                                                                                 \'type\': \'string\'},\n                                                                 \'enum\': {\'$ref\': \'#/definitions/enum\'},\n                                                                 \'exclusiveMaximum\': {\'$ref\': \'#/definitions/exclusiveMaximum\'},\n                                                                 \'exclusiveMinimum\': {\'$ref\': \'#/definitions/exclusiveMinimum\'},\n                                                                 \'format\': {\'type\': \'string\'},\n                                                                 \'in\': {\'description\': \'Determines \'\n                                                                                       \'the \'\n                                                                                       \'location \'\n                                                                                       \'of \'\n                                                                                       \'the \'\n                                                                                       \'parameter.\',\n                                                                        \'enum\': [\'header\'],\n                                                                        \'type\': \'string\'},\n                                                                 \'items\': {\'$ref\': \'#/definitions/primitivesItems\'},\n                                                                 \'maxItems\': {\'$ref\': \'#/definitions/maxItems\'},\n                                                                 \'maxLength\': {\'$ref\': \'#/definitions/maxLength\'},\n                                                                 \'maximum\': {\'$ref\': \'#/definitions/maximum\'},\n                                                                 \'minItems\': {\'$ref\': \'#/definitions/minItems\'},\n                                                                 \'minLength\': {\'$ref\': \'#/definitions/minLength\'},\n                                                                 \'minimum\': {\'$ref\': \'#/definitions/minimum\'},\n                                                                 \'multipleOf\': {\'$ref\': \'#/definitions/multipleOf\'},\n                                                                 \'name\': {\'description\': \'The \'\n                                                                                         \'name \'\n                                                                                         \'of \'\n                                                                                         \'the \'\n                                                                                         \'parameter.\',\n                                                                          \'type\': \'string\'},\n                                                                 \'pattern\': {\'$ref\': \'#/definitions/pattern\'},\n                                                                 \'required\': {\'default\': False,\n                                                                              \'description\': \'Determines \'\n                                                                                             \'whether \'\n                                                                                             \'or \'\n                                                                                             \'not \'\n                                                                                             \'this \'\n                                                                                             \'parameter \'\n                                                                                             \'is \'\n                                                                                             \'required \'\n                                                                                             \'or \'\n                                                                                             \'optional.\',\n                                                                              \'type\': \'boolean\'},\n                                                                 \'type\': {\'enum\': [\'string\',\n                                                                                   \'number\',\n                                                                                   \'boolean\',\n                                                                                   \'integer\',\n                                                                                   \'array\'],\n                                                                          \'type\': \'string\'},\n                                                                 \'uniqueItems\': {\'$ref\': \'#/definitions/uniqueItems\'}}},\n                     \'headers\': {\'additionalProperties\': {\'$ref\': \'#/definitions/header\'},\n                                 \'type\': \'object\'},\n                     \'info\': {\'additionalProperties\': False,\n                              \'description\': \'General information about \'\n                                             \'the API.\',\n                              \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                              \'properties\': {\'contact\': {\'$ref\': \'#/definitions/contact\'},\n                                             \'description\': {\'description\': \'A \'\n                                                                            \'longer \'\n                                                                            \'description \'\n                                                                            \'of \'\n                                                                            \'the \'\n                                                                            \'API. \'\n                                                                            \'Should \'\n                                                                            \'be \'\n                                                                            \'different \'\n                                                                            \'from \'\n                                                                            \'the \'\n                                                                            \'title.  \'\n                                                                            \'GitHub \'\n                                                                            \'Flavored \'\n                                                                            \'Markdown \'\n                                                                            \'is \'\n                                                                            \'allowed.\',\n                                                             \'type\': \'string\'},\n                                             \'license\': {\'$ref\': \'#/definitions/license\'},\n                                             \'termsOfService\': {\'description\': \'The \'\n                                                                               \'terms \'\n                                                                               \'of \'\n                                                                               \'service \'\n                                                                               \'for \'\n                                                                               \'the \'\n                                                                               \'API.\',\n                                                                \'type\': \'string\'},\n                                             \'title\': {\'description\': \'A \'\n                                                                      \'unique \'\n                                                                      \'and \'\n                                                                      \'precise \'\n                                                                      \'title \'\n                                                                      \'of \'\n                                                                      \'the \'\n                                                                      \'API.\',\n                                                       \'type\': \'string\'},\n                                             \'version\': {\'description\': \'A \'\n                                                                        \'semantic \'\n                                                                        \'version \'\n                                                                        \'number \'\n                                                                        \'of \'\n                                                                        \'the \'\n                                                                        \'API.\',\n                                                         \'type\': \'string\'}},\n                              \'required\': [\'version\', \'title\'],\n                              \'type\': \'object\'},\n                     \'jsonReference\': {\'additionalProperties\': False,\n                                       \'properties\': {\'$ref\': {\'type\': \'string\'}},\n                                       \'required\': [\'$ref\'],\n                                       \'type\': \'object\'},\n                     \'license\': {\'additionalProperties\': False,\n                                 \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                 \'properties\': {\'name\': {\'description\': \'The \'\n                                                                        \'name \'\n                                                                        \'of \'\n                                                                        \'the \'\n                                                                        \'license \'\n                                                                        \'type. \'\n                                                                        "It\'s "\n                                                                        \'encouraged \'\n                                                                        \'to \'\n                                                                        \'use \'\n                                                                        \'an \'\n                                                                        \'OSI \'\n                                                                        \'compatible \'\n                                                                        \'license.\',\n                                                         \'type\': \'string\'},\n                                                \'url\': {\'description\': \'The \'\n                                                                       \'URL \'\n                                                                       \'pointing \'\n                                                                       \'to \'\n                                                                       \'the \'\n                                                                       \'license.\',\n                                                        \'format\': \'uri\',\n                                                        \'type\': \'string\'}},\n                                 \'required\': [\'name\'],\n                                 \'type\': \'object\'},\n                     \'maxItems\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/definitions/positiveInteger\'},\n                     \'maxLength\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/definitions/positiveInteger\'},\n                     \'maximum\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/maximum\'},\n                     \'mediaTypeList\': {\'items\': {\'$ref\': \'#/definitions/mimeType\'},\n                                       \'type\': \'array\',\n                                       \'uniqueItems\': True},\n                     \'mimeType\': {\'description\': \'The MIME type of the \'\n                                                 \'HTTP message.\',\n                                  \'type\': \'string\'},\n                     \'minItems\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0\'},\n                     \'minLength\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0\'},\n                     \'minimum\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/minimum\'},\n                     \'multipleOf\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/multipleOf\'},\n                     \'nonBodyParameter\': {\'oneOf\': [{\'$ref\': \'#/definitions/headerParameterSubSchema\'},\n                                                    {\'$ref\': \'#/definitions/formDataParameterSubSchema\'},\n                                                    {\'$ref\': \'#/definitions/queryParameterSubSchema\'},\n                                                    {\'$ref\': \'#/definitions/pathParameterSubSchema\'}],\n                                          \'required\': [\'name\',\n                                                       \'in\',\n                                                       \'type\'],\n                                          \'type\': \'object\'},\n                     \'oauth2AccessCodeSecurity\': {\'additionalProperties\': False,\n                                                  \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                                  \'properties\': {\'authorizationUrl\': {\'format\': \'uri\',\n                                                                                      \'type\': \'string\'},\n                                                                 \'description\': {\'type\': \'string\'},\n                                                                 \'flow\': {\'enum\': [\'accessCode\'],\n                                                                          \'type\': \'string\'},\n                                                                 \'scopes\': {\'$ref\': \'#/definitions/oauth2Scopes\'},\n                                                                 \'tokenUrl\': {\'format\': \'uri\',\n                                                                              \'type\': \'string\'},\n                                                                 \'type\': {\'enum\': [\'oauth2\'],\n                                                                          \'type\': \'string\'}},\n                                                  \'required\': [\'type\',\n                                                               \'flow\',\n                                                               \'authorizationUrl\',\n                                                               \'tokenUrl\'],\n                                                  \'type\': \'object\'},\n                     \'oauth2ApplicationSecurity\': {\'additionalProperties\': False,\n                                                   \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                                   \'properties\': {\'description\': {\'type\': \'string\'},\n                                                                  \'flow\': {\'enum\': [\'application\'],\n                                                                           \'type\': \'string\'},\n                                                                  \'scopes\': {\'$ref\': \'#/definitions/oauth2Scopes\'},\n                                                                  \'tokenUrl\': {\'format\': \'uri\',\n                                                                               \'type\': \'string\'},\n                                                                  \'type\': {\'enum\': [\'oauth2\'],\n                                                                           \'type\': \'string\'}},\n                                                   \'required\': [\'type\',\n                                                                \'flow\',\n                                                                \'tokenUrl\'],\n                                                   \'type\': \'object\'},\n                     \'oauth2ImplicitSecurity\': {\'additionalProperties\': False,\n                                                \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                                \'properties\': {\'authorizationUrl\': {\'format\': \'uri\',\n                                                                                    \'type\': \'string\'},\n                                                               \'description\': {\'type\': \'string\'},\n                                                               \'flow\': {\'enum\': [\'implicit\'],\n                                                                        \'type\': \'string\'},\n                                                               \'scopes\': {\'$ref\': \'#/definitions/oauth2Scopes\'},\n                                                               \'type\': {\'enum\': [\'oauth2\'],\n                                                                        \'type\': \'string\'}},\n                                                \'required\': [\'type\',\n                                                             \'flow\',\n                                                             \'authorizationUrl\'],\n                                                \'type\': \'object\'},\n                     \'oauth2PasswordSecurity\': {\'additionalProperties\': False,\n                                                \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                                \'properties\': {\'description\': {\'type\': \'string\'},\n                                                               \'flow\': {\'enum\': [\'password\'],\n                                                                        \'type\': \'string\'},\n                                                               \'scopes\': {\'$ref\': \'#/definitions/oauth2Scopes\'},\n                                                               \'tokenUrl\': {\'format\': \'uri\',\n                                                                            \'type\': \'string\'},\n                                                               \'type\': {\'enum\': [\'oauth2\'],\n                                                                        \'type\': \'string\'}},\n                                                \'required\': [\'type\',\n                                                             \'flow\',\n                                                             \'tokenUrl\'],\n                                                \'type\': \'object\'},\n                     \'oauth2Scopes\': {\'additionalProperties\': {\'type\': \'string\'},\n                                      \'type\': \'object\'},\n                     \'operation\': {\'additionalProperties\': False,\n                                   \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                   \'properties\': {\'consumes\': {\'$ref\': \'#/definitions/mediaTypeList\',\n                                                               \'description\': \'A \'\n                                                                              \'list \'\n                                                                              \'of \'\n                                                                              \'MIME \'\n                                                                              \'types \'\n                                                                              \'the \'\n                                                                              \'API \'\n                                                                              \'can \'\n                                                                              \'consume.\'},\n                                                  \'deprecated\': {\'default\': False,\n                                                                 \'type\': \'boolean\'},\n                                                  \'description\': {\'description\': \'A \'\n                                                                                 \'longer \'\n                                                                                 \'description \'\n                                                                                 \'of \'\n                                                                                 \'the \'\n                                                                                 \'operation, \'\n                                                                                 \'GitHub \'\n                                                                                 \'Flavored \'\n                                                                                 \'Markdown \'\n                                                                                 \'is \'\n                                                                                 \'allowed.\',\n                                                                  \'type\': \'string\'},\n                                                  \'externalDocs\': {\'$ref\': \'#/definitions/externalDocs\'},\n                                                  \'operationId\': {\'description\': \'A \'\n                                                                                 \'unique \'\n                                                                                 \'identifier \'\n                                                                                 \'of \'\n                                                                                 \'the \'\n                                                                                 \'operation.\',\n                                                                  \'type\': \'string\'},\n                                                  \'parameters\': {\'$ref\': \'#/definitions/parametersList\'},\n                                                  \'produces\': {\'$ref\': \'#/definitions/mediaTypeList\',\n                                                               \'description\': \'A \'\n                                                                              \'list \'\n                                                                              \'of \'\n                                                                              \'MIME \'\n                                                                              \'types \'\n                                                                              \'the \'\n                                                                              \'API \'\n                                                                              \'can \'\n                                                                              \'produce.\'},\n                                                  \'responses\': {\'$ref\': \'#/definitions/responses\'},\n                                                  \'schemes\': {\'$ref\': \'#/definitions/schemesList\'},\n                                                  \'security\': {\'$ref\': \'#/definitions/security\'},\n                                                  \'summary\': {\'description\': \'A \'\n                                                                             \'brief \'\n                                                                             \'summary \'\n                                                                             \'of \'\n                                                                             \'the \'\n                                                                             \'operation.\',\n                                                              \'type\': \'string\'},\n                                                  \'tags\': {\'items\': {\'type\': \'string\'},\n                                                           \'type\': \'array\',\n                                                           \'uniqueItems\': True}},\n                                   \'required\': [\'responses\'],\n                                   \'type\': \'object\'},\n                     \'parameter\': {\'oneOf\': [{\'$ref\': \'#/definitions/bodyParameter\'},\n                                             {\'$ref\': \'#/definitions/nonBodyParameter\'}]},\n                     \'parameterDefinitions\': {\'additionalProperties\': {\'$ref\': \'#/definitions/parameter\'},\n                                              \'description\': \'One or more \'\n                                                             \'JSON \'\n                                                             \'representations \'\n                                                             \'for \'\n                                                             \'parameters\',\n                                              \'type\': \'object\'},\n                     \'parametersList\': {\'additionalItems\': False,\n                                        \'description\': \'The parameters \'\n                                                       \'needed to send a \'\n                                                       \'valid API call.\',\n                                        \'items\': {\'oneOf\': [{\'$ref\': \'#/definitions/parameter\'},\n                                                            {\'$ref\': \'#/definitions/jsonReference\'}]},\n                                        \'type\': \'array\',\n                                        \'uniqueItems\': True},\n                     \'pathItem\': {\'additionalProperties\': False,\n                                  \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                  \'properties\': {\'$ref\': {\'type\': \'string\'},\n                                                 \'delete\': {\'$ref\': \'#/definitions/operation\'},\n                                                 \'get\': {\'$ref\': \'#/definitions/operation\'},\n                                                 \'head\': {\'$ref\': \'#/definitions/operation\'},\n                                                 \'options\': {\'$ref\': \'#/definitions/operation\'},\n                                                 \'parameters\': {\'$ref\': \'#/definitions/parametersList\'},\n                                                 \'patch\': {\'$ref\': \'#/definitions/operation\'},\n                                                 \'post\': {\'$ref\': \'#/definitions/operation\'},\n                                                 \'put\': {\'$ref\': \'#/definitions/operation\'}},\n                                  \'type\': \'object\'},\n                     \'pathParameterSubSchema\': {\'additionalProperties\': False,\n                                                \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                                \'properties\': {\'collectionFormat\': {\'$ref\': \'#/definitions/collectionFormat\'},\n                                                               \'default\': {\'$ref\': \'#/definitions/default\'},\n                                                               \'description\': {\'description\': \'A \'\n                                                                                              \'brief \'\n                                                                                              \'description \'\n                                                                                              \'of \'\n                                                                                              \'the \'\n                                                                                              \'parameter. \'\n                                                                                              \'This \'\n                                                                                              \'could \'\n                                                                                              \'contain \'\n                                                                                              \'examples \'\n                                                                                              \'of \'\n                                                                                              \'use.  \'\n                                                                                              \'GitHub \'\n                                                                                              \'Flavored \'\n                                                                                              \'Markdown \'\n                                                                                              \'is \'\n                                                                                              \'allowed.\',\n                                                                               \'type\': \'string\'},\n                                                               \'enum\': {\'$ref\': \'#/definitions/enum\'},\n                                                               \'exclusiveMaximum\': {\'$ref\': \'#/definitions/exclusiveMaximum\'},\n                                                               \'exclusiveMinimum\': {\'$ref\': \'#/definitions/exclusiveMinimum\'},\n                                                               \'format\': {\'type\': \'string\'},\n                                                               \'in\': {\'description\': \'Determines \'\n                                                                                     \'the \'\n                                                                                     \'location \'\n                                                                                     \'of \'\n                                                                                     \'the \'\n                                                                                     \'parameter.\',\n                                                                      \'enum\': [\'path\'],\n                                                                      \'type\': \'string\'},\n                                                               \'items\': {\'$ref\': \'#/definitions/primitivesItems\'},\n                                                               \'maxItems\': {\'$ref\': \'#/definitions/maxItems\'},\n                                                               \'maxLength\': {\'$ref\': \'#/definitions/maxLength\'},\n                                                               \'maximum\': {\'$ref\': \'#/definitions/maximum\'},\n                                                               \'minItems\': {\'$ref\': \'#/definitions/minItems\'},\n                                                               \'minLength\': {\'$ref\': \'#/definitions/minLength\'},\n                                                               \'minimum\': {\'$ref\': \'#/definitions/minimum\'},\n                                                               \'multipleOf\': {\'$ref\': \'#/definitions/multipleOf\'},\n                                                               \'name\': {\'description\': \'The \'\n                                                                                       \'name \'\n                                                                                       \'of \'\n                                                                                       \'the \'\n                                                                                       \'parameter.\',\n                                                                        \'type\': \'string\'},\n                                                               \'pattern\': {\'$ref\': \'#/definitions/pattern\'},\n                                                               \'required\': {\'description\': \'Determines \'\n                                                                                           \'whether \'\n                                                                                           \'or \'\n                                                                                           \'not \'\n                                                                                           \'this \'\n                                                                                           \'parameter \'\n                                                                                           \'is \'\n                                                                                           \'required \'\n                                                                                           \'or \'\n                                                                                           \'optional.\',\n                                                                            \'enum\': [True],\n                                                                            \'type\': \'boolean\'},\n                                                               \'type\': {\'enum\': [\'string\',\n                                                                                 \'number\',\n                                                                                 \'boolean\',\n                                                                                 \'integer\',\n                                                                                 \'array\'],\n                                                                        \'type\': \'string\'},\n                                                               \'uniqueItems\': {\'$ref\': \'#/definitions/uniqueItems\'}},\n                                                \'required\': [\'required\']},\n                     \'paths\': {\'additionalProperties\': False,\n                               \'description\': \'Relative paths to the \'\n                                              \'individual endpoints. They \'\n                                              \'must be relative to the \'\n                                              "\'basePath\'.",\n                               \'patternProperties\': {\'^/\': {\'$ref\': \'#/definitions/pathItem\'},\n                                                     \'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                               \'type\': \'object\'},\n                     \'pattern\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/pattern\'},\n                     \'primitivesItems\': {\'additionalProperties\': False,\n                                         \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                         \'properties\': {\'collectionFormat\': {\'$ref\': \'#/definitions/collectionFormat\'},\n                                                        \'default\': {\'$ref\': \'#/definitions/default\'},\n                                                        \'enum\': {\'$ref\': \'#/definitions/enum\'},\n                                                        \'exclusiveMaximum\': {\'$ref\': \'#/definitions/exclusiveMaximum\'},\n                                                        \'exclusiveMinimum\': {\'$ref\': \'#/definitions/exclusiveMinimum\'},\n                                                        \'format\': {\'type\': \'string\'},\n                                                        \'items\': {\'$ref\': \'#/definitions/primitivesItems\'},\n                                                        \'maxItems\': {\'$ref\': \'#/definitions/maxItems\'},\n                                                        \'maxLength\': {\'$ref\': \'#/definitions/maxLength\'},\n                                                        \'maximum\': {\'$ref\': \'#/definitions/maximum\'},\n                                                        \'minItems\': {\'$ref\': \'#/definitions/minItems\'},\n                                                        \'minLength\': {\'$ref\': \'#/definitions/minLength\'},\n                                                        \'minimum\': {\'$ref\': \'#/definitions/minimum\'},\n                                                        \'multipleOf\': {\'$ref\': \'#/definitions/multipleOf\'},\n                                                        \'pattern\': {\'$ref\': \'#/definitions/pattern\'},\n                                                        \'type\': {\'enum\': [\'string\',\n                                                                          \'number\',\n                                                                          \'integer\',\n                                                                          \'boolean\',\n                                                                          \'array\'],\n                                                                 \'type\': \'string\'},\n                                                        \'uniqueItems\': {\'$ref\': \'#/definitions/uniqueItems\'}},\n                                         \'type\': \'object\'},\n                     \'queryParameterSubSchema\': {\'additionalProperties\': False,\n                                                 \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                                 \'properties\': {\'allowEmptyValue\': {\'default\': False,\n                                                                                    \'description\': \'allows \'\n                                                                                                   \'sending \'\n                                                                                                   \'a \'\n                                                                                                   \'parameter \'\n                                                                                                   \'by \'\n                                                                                                   \'name \'\n                                                                                                   \'only \'\n                                                                                                   \'or \'\n                                                                                                   \'with \'\n                                                                                                   \'an \'\n                                                                                                   \'empty \'\n                                                                                                   \'value.\',\n                                                                                    \'type\': \'boolean\'},\n                                                                \'collectionFormat\': {\'$ref\': \'#/definitions/collectionFormatWithMulti\'},\n                                                                \'default\': {\'$ref\': \'#/definitions/default\'},\n                                                                \'description\': {\'description\': \'A \'\n                                                                                               \'brief \'\n                                                                                               \'description \'\n                                                                                               \'of \'\n                                                                                               \'the \'\n                                                                                               \'parameter. \'\n                                                                                               \'This \'\n                                                                                               \'could \'\n                                                                                               \'contain \'\n                                                                                               \'examples \'\n                                                                                               \'of \'\n                                                                                               \'use.  \'\n                                                                                               \'GitHub \'\n                                                                                               \'Flavored \'\n                                                                                               \'Markdown \'\n                                                                                               \'is \'\n                                                                                               \'allowed.\',\n                                                                                \'type\': \'string\'},\n                                                                \'enum\': {\'$ref\': \'#/definitions/enum\'},\n                                                                \'exclusiveMaximum\': {\'$ref\': \'#/definitions/exclusiveMaximum\'},\n                                                                \'exclusiveMinimum\': {\'$ref\': \'#/definitions/exclusiveMinimum\'},\n                                                                \'format\': {\'type\': \'string\'},\n                                                                \'in\': {\'description\': \'Determines \'\n                                                                                      \'the \'\n                                                                                      \'location \'\n                                                                                      \'of \'\n                                                                                      \'the \'\n                                                                                      \'parameter.\',\n                                                                       \'enum\': [\'query\'],\n                                                                       \'type\': \'string\'},\n                                                                \'items\': {\'$ref\': \'#/definitions/primitivesItems\'},\n                                                                \'maxItems\': {\'$ref\': \'#/definitions/maxItems\'},\n                                                                \'maxLength\': {\'$ref\': \'#/definitions/maxLength\'},\n                                                                \'maximum\': {\'$ref\': \'#/definitions/maximum\'},\n                                                                \'minItems\': {\'$ref\': \'#/definitions/minItems\'},\n                                                                \'minLength\': {\'$ref\': \'#/definitions/minLength\'},\n                                                                \'minimum\': {\'$ref\': \'#/definitions/minimum\'},\n                                                                \'multipleOf\': {\'$ref\': \'#/definitions/multipleOf\'},\n                                                                \'name\': {\'description\': \'The \'\n                                                                                        \'name \'\n                                                                                        \'of \'\n                                                                                        \'the \'\n                                                                                        \'parameter.\',\n                                                                         \'type\': \'string\'},\n                                                                \'pattern\': {\'$ref\': \'#/definitions/pattern\'},\n                                                                \'required\': {\'default\': False,\n                                                                             \'description\': \'Determines \'\n                                                                                            \'whether \'\n                                                                                            \'or \'\n                                                                                            \'not \'\n                                                                                            \'this \'\n                                                                                            \'parameter \'\n                                                                                            \'is \'\n                                                                                            \'required \'\n                                                                                            \'or \'\n                                                                                            \'optional.\',\n                                                                             \'type\': \'boolean\'},\n                                                                \'type\': {\'enum\': [\'string\',\n                                                                                  \'number\',\n                                                                                  \'boolean\',\n                                                                                  \'integer\',\n                                                                                  \'array\'],\n                                                                         \'type\': \'string\'},\n                                                                \'uniqueItems\': {\'$ref\': \'#/definitions/uniqueItems\'}}},\n                     \'response\': {\'additionalProperties\': False,\n                                  \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                  \'properties\': {\'description\': {\'type\': \'string\'},\n                                                 \'examples\': {\'$ref\': \'#/definitions/examples\'},\n                                                 \'headers\': {\'$ref\': \'#/definitions/headers\'},\n                                                 \'schema\': {\'oneOf\': [{\'$ref\': \'#/definitions/schema\'},\n                                                                      {\'$ref\': \'#/definitions/fileSchema\'}]}},\n                                  \'required\': [\'description\'],\n                                  \'type\': \'object\'},\n                     \'responseDefinitions\': {\'additionalProperties\': {\'$ref\': \'#/definitions/response\'},\n                                             \'description\': \'One or more \'\n                                                            \'JSON \'\n                                                            \'representations \'\n                                                            \'for \'\n                                                            \'parameters\',\n                                             \'type\': \'object\'},\n                     \'responseValue\': {\'oneOf\': [{\'$ref\': \'#/definitions/response\'},\n                                                 {\'$ref\': \'#/definitions/jsonReference\'}]},\n                     \'responses\': {\'additionalProperties\': False,\n                                   \'description\': \'Response objects names \'\n                                                  \'can either be any valid \'\n                                                  \'HTTP status code or \'\n                                                  "\'default\'.",\n                                   \'minProperties\': 1,\n                                   \'not\': {\'additionalProperties\': False,\n                                           \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                           \'type\': \'object\'},\n                                   \'patternProperties\': {\'^([0-9]{3})$|^(default)$\': {\'$ref\': \'#/definitions/responseValue\'},\n                                                         \'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                   \'type\': \'object\'},\n                     \'schema\': {\'additionalProperties\': False,\n                                \'description\': \'A deterministic version of \'\n                                               \'a JSON Schema object.\',\n                                \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                                \'properties\': {\'$ref\': {\'type\': \'string\'},\n                                               \'additionalProperties\': {\'anyOf\': [{\'$ref\': \'#/definitions/schema\'},\n                                                                                  {\'type\': \'boolean\'}],\n                                                                        \'default\': {}},\n                                               \'allOf\': {\'items\': {\'$ref\': \'#/definitions/schema\'},\n                                                         \'minItems\': 1,\n                                                         \'type\': \'array\'},\n                                               \'default\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/default\'},\n                                               \'description\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/description\'},\n                                               \'discriminator\': {\'type\': \'string\'},\n                                               \'enum\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/enum\'},\n                                               \'example\': {},\n                                               \'exclusiveMaximum\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/exclusiveMaximum\'},\n                                               \'exclusiveMinimum\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/exclusiveMinimum\'},\n                                               \'externalDocs\': {\'$ref\': \'#/definitions/externalDocs\'},\n                                               \'format\': {\'type\': \'string\'},\n                                               \'items\': {\'anyOf\': [{\'$ref\': \'#/definitions/schema\'},\n                                                                   {\'items\': {\'$ref\': \'#/definitions/schema\'},\n                                                                    \'minItems\': 1,\n                                                                    \'type\': \'array\'}],\n                                                         \'default\': {}},\n                                               \'maxItems\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/definitions/positiveInteger\'},\n                                               \'maxLength\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/definitions/positiveInteger\'},\n                                               \'maxProperties\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/definitions/positiveInteger\'},\n                                               \'maximum\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/maximum\'},\n                                               \'minItems\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0\'},\n                                               \'minLength\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0\'},\n                                               \'minProperties\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0\'},\n                                               \'minimum\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/minimum\'},\n                                               \'multipleOf\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/multipleOf\'},\n                                               \'pattern\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/pattern\'},\n                                               \'properties\': {\'additionalProperties\': {\'$ref\': \'#/definitions/schema\'},\n                                                              \'default\': {},\n                                                              \'type\': \'object\'},\n                                               \'readOnly\': {\'default\': False,\n                                                            \'type\': \'boolean\'},\n                                               \'required\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/definitions/stringArray\'},\n                                               \'title\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/title\'},\n                                               \'type\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/type\'},\n                                               \'uniqueItems\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/uniqueItems\'},\n                                               \'xml\': {\'$ref\': \'#/definitions/xml\'}},\n                                \'type\': \'object\'},\n                     \'schemesList\': {\'description\': \'The transfer protocol \'\n                                                    \'of the API.\',\n                                     \'items\': {\'enum\': [\'http\',\n                                                        \'https\',\n                                                        \'ws\',\n                                                        \'wss\'],\n                                               \'type\': \'string\'},\n                                     \'type\': \'array\',\n                                     \'uniqueItems\': True},\n                     \'security\': {\'items\': {\'$ref\': \'#/definitions/securityRequirement\'},\n                                  \'type\': \'array\',\n                                  \'uniqueItems\': True},\n                     \'securityDefinitions\': {\'additionalProperties\': {\'oneOf\': [{\'$ref\': \'#/definitions/basicAuthenticationSecurity\'},\n                                                                                {\'$ref\': \'#/definitions/apiKeySecurity\'},\n                                                                                {\'$ref\': \'#/definitions/oauth2ImplicitSecurity\'},\n                                                                                {\'$ref\': \'#/definitions/oauth2PasswordSecurity\'},\n                                                                                {\'$ref\': \'#/definitions/oauth2ApplicationSecurity\'},\n                                                                                {\'$ref\': \'#/definitions/oauth2AccessCodeSecurity\'}]},\n                                             \'type\': \'object\'},\n                     \'securityRequirement\': {\'additionalProperties\': {\'items\': {\'type\': \'string\'},\n                                                                      \'type\': \'array\',\n                                                                      \'uniqueItems\': True},\n                                             \'type\': \'object\'},\n                     \'tag\': {\'additionalProperties\': False,\n                             \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                             \'properties\': {\'description\': {\'type\': \'string\'},\n                                            \'externalDocs\': {\'$ref\': \'#/definitions/externalDocs\'},\n                                            \'name\': {\'type\': \'string\'}},\n                             \'required\': [\'name\'],\n                             \'type\': \'object\'},\n                     \'title\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/title\'},\n                     \'uniqueItems\': {\'$ref\': \'http://json-schema.org/draft-04/schema#/properties/uniqueItems\'},\n                     \'vendorExtension\': {\'additionalItems\': True,\n                                         \'additionalProperties\': True,\n                                         \'description\': \'Any property \'\n                                                        \'starting with x- \'\n                                                        \'is valid.\'},\n                     \'xml\': {\'additionalProperties\': False,\n                             \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n                             \'properties\': {\'attribute\': {\'default\': False,\n                                                          \'type\': \'boolean\'},\n                                            \'name\': {\'type\': \'string\'},\n                                            \'namespace\': {\'type\': \'string\'},\n                                            \'prefix\': {\'type\': \'string\'},\n                                            \'wrapped\': {\'default\': False,\n                                                        \'type\': \'boolean\'}},\n                             \'type\': \'object\'}},\n     \'patternProperties\': {\'^x-\': {\'$ref\': \'#/definitions/vendorExtension\'}},\n     \'properties\': {\'basePath\': {\'description\': \'The base path to the API. \'\n                                                "Example: \'/api\'.",\n                                 \'pattern\': \'^/\',\n                                 \'type\': \'string\'},\n                    \'consumes\': {\'$ref\': \'#/definitions/mediaTypeList\',\n                                 \'description\': \'A list of MIME types \'\n                                                \'accepted by the API.\'},\n                    \'definitions\': {\'$ref\': \'#/definitions/definitions\'},\n                    \'externalDocs\': {\'$ref\': \'#/definitions/externalDocs\'},\n                    \'host\': {\'description\': \'The host (name or ip) of the \'\n                                            "API. Example: \'swagger.io\'",\n                             \'pattern\': \'^[^{}/ :\\\\\\\\]+(?::\\\\d+)?$\',\n                             \'type\': \'string\'},\n                    \'info\': {\'$ref\': \'#/definitions/info\'},\n                    \'parameters\': {\'$ref\': \'#/definitions/parameterDefinitions\'},\n                    \'paths\': {\'$ref\': \'#/definitions/paths\'},\n                    \'produces\': {\'$ref\': \'#/definitions/mediaTypeList\',\n                                 \'description\': \'A list of MIME types the \'\n                                                \'API can produce.\'},\n                    \'responses\': {\'$ref\': \'#/definitions/responseDefinitions\'},\n                    \'schemes\': {\'$ref\': \'#/definitions/schemesList\'},\n                    \'security\': {\'$ref\': \'#/definitions/security\'},\n                    \'securityDefinitions\': {\'$ref\': \'#/definitions/securityDefinitions\'},\n                    \'swagger\': {\'description\': \'The Swagger version of \'\n                                               \'this document.\',\n                                \'enum\': [\'2.0\'],\n                                \'type\': \'string\'},\n                    \'tags\': {\'items\': {\'$ref\': \'#/definitions/tag\'},\n                             \'type\': \'array\',\n                             \'uniqueItems\': True}},\n     \'required\': [\'swagger\', \'info\', \'paths\'],\n     \'title\': \'A JSON Schema for Swagger 2.0 API.\',\n     \'type\': \'object\'}\n\nOn instance:\n    {\'components\': {\'parameters\': {\'Authorization\': {\'description\': \'提供 \'\n                                                                    \'JWT \'\n                                                                    \'Token, \'\n                                                                    \'格式 \'\n                                                                    \'`"Bearer \'\n                                                                    \'{TOKEN}"`\',\n                                                     \'in\': \'header\',\n                                                     \'name\': \'Authorization\',\n                                                     \'required\': True,\n                                                     \'schema\': {\'type\': \'string\'}}},\n                    \'schemas\': {\'DefaultErrorResponse\': {\'properties\': {\'data\': {\'properties\': {\'exc_info\': {\'description\': \'详细错误信息\',\n                                                                                                             \'type\': \'string\'},\n                                                                                                \'status_code\': {\'description\': \'错误码\',\n                                                                                                                \'type\': \'integer\'}},\n                                                                                 \'type\': \'object\'},\n                                                                        \'errors\': {\'description\': \'有多个错误值时（通常发生在验证表单失败时）\',\n                                                                                   \'type\': \'string\'},\n                                                                        \'message\': {\'description\': \'错误描述信息\',\n                                                                                    \'type\': \'string\'},\n                                                                        \'status\': {\'description\': \'错误字符串\',\n                                                                                   \'type\': \'string\'}},\n                                                         \'required\': [\'status\'],\n                                                         \'type\': \'object\'},\n                                \'DefaultSuccessResponse\': {\'properties\': {\'status\': {\'default\': \'success\',\n                                                                                     \'description\': \'接口调用结果\',\n                                                                                     \'type\': \'string\'}},\n                                                           \'required\': [\'status\'],\n                                                           \'type\': \'object\'},\n                                \'Status\': {\'default\': \'success\',\n                                           \'description\': \'接口请求结果\\n\'\n                                                          \'\\n\'\n                                                          \'- `success` \'\n                                                          \'表示成功\\n\'\n                                                          \'- 其他表示错误\\n\',\n                                           \'type\': \'string\'}},\n                    \'securitySchemes\': {\'name\': {\'bearerFormat\': \'JWT\',\n                                                 \'scheme\': \'bearer\',\n                                                 \'type\': \'http\'}}},\n     \'info\': {\'description\': \'注意\\n\\n1. 时间字符串，如无特殊说明，皆为 RFC3339 UTC\\n\',\n              \'title\': \'工作人员小程序端 API\',\n              \'version\': \'1.0.0\'},\n     \'openapi\': \'3.0.2\',\n     \'paths\': {\'/\': {\'get\': {\'responses\': {\'200\': {\'description\': \'OK\'}},\n                             \'summary\': \'返回 YAML 格式的接口文档\'}},\n               \'/npr\': {\'post\': {\'requestBody\': {\'content\': {\'application/json\': {\'schema\': {\'additionalProperties\': False,\n                                                                                             \'properties\': {\'url\': {\'description\': \'车牌图片地址\',\n                                                                                                                    \'type\': \'string\'}},\n                                                                                             \'required\': [\'url\'],\n                                                                                             \'type\': \'object\'}}},\n                                                 \'required\': True},\n                                 \'responses\': {\'200\': {\'content\': {\'application/json\': {\'schema\': {\'properties\': {\'data\': {\'properties\': {\'np\': {\'description\': \'车牌\',\n                                                                                                                                                 \'type\': \'string\'}},\n                                                                                                                           \'type\': \'object\'},\n                                                                                                                  \'status\': {\'description\': \'success\',\n                                                                                                                             \'type\': \'string\'}},\n                                                                                                   \'type\': \'object\'}}},\n                                                       \'description\': \'OK\'}},\n                                 \'summary\': \'识别车牌\',\n                                 \'tags\': [\'npr\']}}},\n     \'servers\': [{\'description\': \'本地开发环境\',\n                  \'url\': \'https://localhost:3000\'}],\n     \'tags\': [{\'description\': \'车牌识别\', \'name\': \'npr\'}]}', &lt;ValidationError: "'components', 'openapi', 'servers' do not match any of the regexes: '^x-'"&gt;)
+
+</error>
+    <system-out />
+  </testcase>
+</testsuite>

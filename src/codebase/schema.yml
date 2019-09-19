@@ -1,0 +1,129 @@
+openapi: '3.0.2'
+info:
+  title: 工作人员小程序端 API
+  version: '1.0.0'
+  description: |
+    注意
+    
+    1. 时间字符串，如无特殊说明，皆为 RFC3339 UTC
+servers:
+  - url: https://localhost:3000
+    description: 本地开发环境
+tags:
+  - name: npr
+    description: 车牌识别
+
+
+paths:
+
+  "/":
+    get:
+      summary: 返回 YAML 格式的接口文档
+      responses:
+        '200':
+          description: OK
+
+          
+  "/npr":
+  
+    post:
+      tags:
+      - npr
+      summary: 识别车牌
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: 
+              - url
+              additionalProperties: false
+              properties:
+                url:
+                  type: string
+                  description: 车牌图片地址
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: success
+                  data:
+                    type: object
+                    properties:
+                      np:
+                        type: string
+                        description: 车牌
+
+
+components:
+
+  securitySchemes:
+    name:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  parameters:
+
+    Authorization:
+      name: Authorization
+      in: header
+      schema:
+        type: string
+      description: 提供 JWT Token, 格式 `"Bearer {TOKEN}"`
+      required: true
+
+
+  schemas:
+
+    Status:
+      type: string
+      description: |
+        接口请求结果
+
+        - `success` 表示成功
+        - 其他表示错误
+      default: "success"
+
+
+    DefaultSuccessResponse:
+      type: object
+      required:
+      - status
+      properties:
+        status:
+          type: string
+          description: 接口调用结果
+          default: "success"
+
+
+    DefaultErrorResponse:
+      type: object
+      required:
+      - status
+      properties:
+        status:
+          type: string
+          description: 错误字符串
+        message:
+          type: string
+          description: 错误描述信息
+        errors:
+          type: string
+          description: 有多个错误值时（通常发生在验证表单失败时）
+        data:
+          type: object
+          properties:
+            status_code:
+              type: integer
+              description: 错误码
+            exc_info:
+              type: string
+              description: 详细错误信息
